@@ -1,0 +1,114 @@
+.hero-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 2rem; /* Add padding for better spacing */
+}
+
+.hero-container::after,
+.hero-container::before {
+  content: " ";
+  width: 28.125rem;
+  height: 28.125rem;
+  border-radius: 28.125rem;
+  background: #7c66e3;
+  position: absolute;
+  z-index: -1;
+  filter: blur(225px);
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-container::after {
+  top: -3rem;
+  left: -5rem;
+}
+
+.hero-container::before {
+  bottom: 2rem;
+  right: 0rem;
+}
+
+.hero-container h2 {
+  font-size: 3.8rem;
+  font-weight: 600;
+  line-height: 5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-container p {
+  width: 80%;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+.hero-img {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+
+.hero-img > img {
+  width: 100%;
+  max-width: 400px; /* Adjusted the max width for a bigger image */
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+.tech-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem; /* Margin to add spacing from the image */
+}
+
+.tech-icons > img {
+  width: 5rem;
+  height: 5rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.tech-icons > img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+@media (max-width: 1025px) {
+  .hero-container h2 {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+
+  .hero-container p {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+
+  .tech-icons > img {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-container h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .hero-container p {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+
+  .tech-icons > img {
+    width: 4rem;
+    height: 4rem;
+  }
+}
