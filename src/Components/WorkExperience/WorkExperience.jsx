@@ -38,7 +38,7 @@ const WorkExperience = () => {
 
   return (
     <section className="experience-container">
-      <h5 className="experience-title">Work Experience</h5>
+      <h5 className="experience-title">Work Experience + Education</h5>
       <div className="experience-slider">
         <div className="arrow-left" onClick={slideLeft}>
           <FontAwesomeIcon icon={faChevronLeft} />

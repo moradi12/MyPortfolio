@@ -28,7 +28,7 @@ const Navbar = () => {
             </li>
             <li>
               <a className="menu-item" href="#experience">
-                Work Experience
+                Work Experience 
               </a>
             </li>
             <li>
