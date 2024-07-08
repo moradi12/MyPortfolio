@@ -80,8 +80,8 @@ export const WORK_EXPERIENCE = [
 
 
   {
-    title: "Education",
-    institutions: "College of Management Academic Studies",
+    title: "Education-College of Management Academic Studies",
+    // institutions: "College of Management Academic Studies",
     date: "2022-2023",
     responsibilities: [
       "Completed a comprehensive program at the College of Management, enhancing my analytical skills, critical thinking, and understanding of economic principles and business strategies."
@@ -90,8 +90,8 @@ export const WORK_EXPERIENCE = [
   },
 
   {
-    title: "Education",
-    institutions: "John Bryce Training College",
+    title: "Education-John Bryce Training College",
+    // institutions: "John Bryce Training College",
     date: "2023-2024",
     responsibilities: [
       "Developed web applications using Java, Spring Boot, and React.",

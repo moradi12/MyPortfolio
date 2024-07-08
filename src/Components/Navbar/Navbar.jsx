@@ -37,11 +37,9 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <button
-                className="contact-btn" onClick={() => {}}
-              >
+              <a className="contact-btn" href="#contact">
                 Hire Me
-              </button>
+              </a>
             </li>
           </ul>
           <button className="menu-btn" onClick={toggleMenu}>
@@ -51,9 +49,6 @@ const Navbar = () => {
             >
               {openMenu ? "close" : "menu"}
             </span>
-
-
-            
           </button>
         </div>
       </nav>

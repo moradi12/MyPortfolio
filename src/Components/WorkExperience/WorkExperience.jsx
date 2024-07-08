@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import Slider from "react-slick"; // Ensure you have react-slick and slick-carousel installed
+import Slider from "react-slick"; 
 import "./WorkExperience.css";
 import { WORK_EXPERIENCE } from "../../utils/data";
 import ExperienceCard from "./ExperienceCard/ExperienceCard";
@@ -37,7 +37,7 @@ const WorkExperience = () => {
   };
 
   return (
-    <section className="experience-container">
+    <section id="experience" className="experience-container">
       <h5 className="experience-title">Work Experience + Education</h5>
       <div className="experience-slider">
         <div className="arrow-left" onClick={slideLeft}>

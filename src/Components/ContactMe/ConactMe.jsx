@@ -4,26 +4,54 @@ import ContactInfoCard from "./ContactInfoCard/ContactInfoCard";
 import ContactForm from "./ContactForm/ContactForm";
 
 const ContactMe = () => {
-    return (
-        <section className="contact-container">
-            <h5>Contact Me</h5>
-            <div className="contact-content">
-                <div style={{ flex: 1 }}>
-                    <ContactInfoCard
-                        iconUrl="./assets/images/mail.png"
-                        text="TamirMoradi@Gmail.com"
-                    />
-                    <ContactInfoCard
-                        iconUrl="./assets/images/Github.png"
-                        text="github.com/moradi12"
-                    />
-                </div>
-                <div style={{ flex: 1 }}>
-                    <ContactForm />
-                </div>
-            </div>
-        </section>
-    );
+  return (
+    <section id="contact" className="contact-container">
+      <h5>Contact Me</h5>
+      <div className="contact-content">
+        <div style={{ flex: 1 }}>
+          <ContactInfoCard
+            iconUrl="./assets/images/mail.png"
+            text={
+              <a 
+                href="mailto:TamirMoradi@Gmail.com"
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                TamirMoradi@Gmail.com
+              </a>
+            }
+          />
+          <ContactInfoCard
+            iconUrl="./assets/images/Github.png"
+            text={
+              <a 
+                href="https://github.com/moradi12" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                github.com/moradi12
+              </a>
+            }
+          />
+          <ContactInfoCard
+            iconUrl="./assets/images/Linkedin.png"
+            text={
+              <a 
+                href="https://www.linkedin.com/in/tamir-moradi-1a62b0260/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                LinkedIn/Tamir Moradi
+              </a>
+            }
+          />
+        </div>
+        <div style={{ flex: 1 }}>
+          <ContactForm />
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default ContactMe;
