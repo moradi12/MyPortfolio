@@ -34,7 +34,7 @@
 
 .menu-item {
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 1.4rem;
   font-weight: 500;
   color: #fff;
   position: relative;
@@ -61,7 +61,7 @@
 }
 
 .contact-btn {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   font-weight: 500;
   display: flex;
   align-items: center;

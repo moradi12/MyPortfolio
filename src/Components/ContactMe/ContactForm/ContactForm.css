@@ -18,7 +18,7 @@ form input,
 form textarea {
     flex: 1;
     width: 100%;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     color: #fff;
     background: #130f2a;
     border: 1.5px solid #6751b9;
@@ -27,7 +27,7 @@ form textarea {
 }
 
 form button {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 500;
     color: #fff;
     border: 1.5px solid #a892fe;

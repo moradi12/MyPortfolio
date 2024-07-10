@@ -9,19 +9,19 @@ const MobileNav = ({ isOpen, toggleMenu }) => {
         onClick={toggleMenu}
       >
         <div className="mobile-menu-container">
-          <img className="logo" src="./assets/images/logo.svg" alt='' />
+          <img className="logo" src="./assets/images/logo.svg" alt="Logo" />
           <ul>
             <li>
-              <a className="menu-item">Home</a>
+              <a href="#home" className="menu-item">Home</a>
             </li>
             <li>
-              <a className="menu-item">Skills</a>
+              <a href="#skills" className="menu-item">Skills</a>
             </li>
             <li>
-              <a className="menu-item">Work Experience</a>
+              <a href="#work-experience" className="menu-item">Work Experience</a>
             </li>
             <li>
-              <a className="menu-item">Contact Me</a>
+              <a href="#contact-me" className="menu-item">Contact Me</a>
             </li>
           </ul>
           <button className="contact-btn" onClick={() => { }}>
