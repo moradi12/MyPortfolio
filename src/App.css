@@ -1,4 +1,3 @@
-/* General container adjustments for centering and full width on smaller screens */
 .container {
   max-width: 1300px;
   margin: 0 auto;
@@ -24,7 +23,6 @@
   }
 }
 
-/* Adjustments for the sections to ensure full width on smaller screens */
 .section {
   margin-bottom: 4rem;
 }

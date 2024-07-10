@@ -1,70 +1,79 @@
 .mobile-menu {
-    width: 100vw;
-    height: 100vh;
-    display: none;
-    background-color: rgba(0, 0, 0, 0.3);
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 999 !important;
-    opacity: 0;
-    box-shadow: 0px 29px 80px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-    transform: translateX(-100vw);
-  }
-  
-  .mobile-menu-container {
-    width: 60vw;
-    height: 100vh;
-    background-color: #342864;
-    padding: 2rem;
-  }
-  
-  .mobile-menu-active {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  
-  .mobile-menu img {
-    margin-bottom: 3rem;
-    width: 100px; 
-  }
-  
-  .mobile-menu ul {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    list-style: none;
-    padding: 0;
-  }
-  
-  .menu-item {
-    text-decoration: none;
-    font-size: 1.2rem; 
-    font-weight: 500;
-    color: #fff;
-    margin: 10px 0;
-    transition: color 0.3s ease;
-  }
-  
-  .menu-item:hover {
-    color: #a993fe; 
-  }
-  
-  @media (max-width: 769px) {
-    .mobile-menu {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999 !important;
+  opacity: 0;
+  box-shadow: 0px 29px 80px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  transform: translateX(-100vw);
+}
+
+.mobile-menu-container {
+  width: 60vw;
+  height: 100vh;
+  background-color: #342864;
+  padding: 2rem;
+}
+
+.mobile-menu-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.mobile-menu img {
+  margin-bottom: 3rem;
+  width: 100px; 
+}
+
+.mobile-menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+.menu-item {
+  text-decoration: none;
+  font-size: 1.2rem; 
+  font-weight: 500;
+  color: #fff;
+  margin: 10px 0;
+  transition: color 0.3s ease;
+}
+
+.menu-item:hover {
+  color: #a993fe; 
+}
+
+@media (max-width: 768px) {
+  .mobile-menu {
       display: block;
-    }
-  
-    .menu {
+  }
+
+  .menu {
       display: none;
-    }
   }
-  
+
+  .mobile-menu-container {
+      width: 80vw; 
+      padding: 1rem; 
+  }
+
+  .mobile-menu img {
+      margin-bottom: 1.5rem; 
+      width: 80px;
+  }
+
   .menu.open {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
   }
-  
+}

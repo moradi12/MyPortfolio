@@ -1,6 +1,6 @@
+import React, { useState } from "react";
 import MobileNav from "./MobileNav/MobileNav";
 import "./Navbar.css";
-import React, { useState } from "react";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -28,7 +28,7 @@ const Navbar = () => {
             </li>
             <li>
               <a className="menu-item" href="#experience">
-                Work Experience 
+                Work Experience
               </a>
             </li>
             <li>

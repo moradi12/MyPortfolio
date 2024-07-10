@@ -17,8 +17,8 @@
 .contact-content a.email-link,
 .contact-content a.linkedin-link,
 .contact-content a.github-link {
-  font-size: 1.5rem; /* Increase font size */
-  color: white; /* Change font color to white */
+  font-size: 1.5rem; 
+  color: white; 
   text-decoration: none;
 }
 
@@ -41,7 +41,7 @@
   .contact-content a.email-link,
   .contact-content a.linkedin-link,
   .contact-content a.github-link {
-    font-size: 1.3rem; /* Adjust link font size for medium screens */
+    font-size: 1.3rem;
   }
 }
 
