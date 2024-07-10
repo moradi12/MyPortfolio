@@ -14,13 +14,68 @@
   gap: 3rem;
 }
 
+.contact-content a.email-link,
+.contact-content a.linkedin-link,
+.contact-content a.github-link {
+  font-size: 1.5rem; /* Increase font size */
+  color: white; /* Change font color to white */
+  text-decoration: none;
+}
+
+.contact-content a.email-link:hover,
+.contact-content a.linkedin-link:hover,
+.contact-content a.github-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1025px) {
+  .contact-container h5 {
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .contact-content {
+    gap: 2rem;
+  }
+
+  .contact-content a.email-link,
+  .contact-content a.linkedin-link,
+  .contact-content a.github-link {
+    font-size: 1.3rem; /* Adjust link font size for medium screens */
+  }
+}
+
 @media (max-width: 768px) {
   .contact-content {
     flex-direction: column-reverse;
+    gap: 1.5rem;
   }
 
   .contact-container h5 {
-    font-size: 2rem;
-    margin-bottom: 0rem;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-content a.email-link,
+  .contact-content a.linkedin-link,
+  .contact-content a.github-link {
+    font-size: 1.2rem; 
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-container h5 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-content {
+    gap: 1rem;
+  }
+
+  .contact-content a.email-link,
+  .contact-content a.linkedin-link,
+  .contact-content a.github-link {
+    font-size: 1rem; 
   }
 }

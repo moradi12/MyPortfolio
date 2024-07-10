@@ -3,11 +3,32 @@
 * {
   font-family: "Poppins", sans-serif;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-
 body {
-    color: #fff;
-    background-color: #060417;
+  color: #fff;
+  background-color: #060417;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Responsive typography */
+@media (max-width: 1025px) {
+  body {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 0.85rem;
+  }
 }

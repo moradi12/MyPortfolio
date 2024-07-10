@@ -8,9 +8,9 @@
     border: 1.5px solid #6751b9;
     padding: 1.5rem;
     margin-bottom: 2rem;
-}
-
-.contact-details-card .icon {
+  }
+  
+  .contact-details-card .icon {
     width: 4rem;
     height: 4rem;
     display: flex;
@@ -19,15 +19,73 @@
     border-radius: 0.5rem;
     background: #3d3072;
     margin-bottom: 0.8rem;
-}
-
-.icon img {
+  }
+  
+  .icon img {
     width: 1.8rem;
     height: auto;
     object-fit: contain;
-}
-
-.contact-details-card p {
+  }
+  
+  .contact-details-card p {
     font-size: 0.9rem;
     font-weight: 400;
-}
+  }
+  
+  @media (max-width: 1025px) {
+    .contact-details-card {
+      padding: 1.2rem;
+    }
+  
+    .contact-details-card .icon {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+  
+    .icon img {
+      width: 1.5rem;
+    }
+  
+    .contact-details-card p {
+      font-size: 0.85rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .contact-details-card {
+      padding: 1rem;
+    }
+  
+    .contact-details-card .icon {
+      width: 3rem;
+      height: 3rem;
+    }
+  
+    .icon img {
+      width: 1.3rem;
+    }
+  
+    .contact-details-card p {
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .contact-details-card {
+      padding: 0.8rem;
+    }
+  
+    .contact-details-card .icon {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  
+    .icon img {
+      width: 1rem;
+    }
+  
+    .contact-details-card p {
+      font-size: 0.75rem;
+    }
+  }
+  

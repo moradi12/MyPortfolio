@@ -8,6 +8,7 @@
   font-weight: 600;
   margin-bottom: 3rem;
 }
+
 .arrow-left,
 .arrow-right {
   width: 2.2rem;
@@ -39,30 +40,31 @@
   right: -2rem;
 }
 
-
 @media (max-width: 1025px) {
-    .arrow-left {
-      left: 0rem;
-    }
-  
-    .arrow-right {
-      right: 0rem;
-    }
+  .arrow-left {
+    left: 0rem;
   }
-  
 
-  @media (max-width: 768px) {
-    .experience-container h5 {
-      font-size: 1.3rem;
-      margin-bottom: 2rem;
-    }
-  
-    .arrow-left {
-      left: -1rem;
-    }
-  
-    .arrow-right {
-      right: -1rem;
-    }
+  .arrow-right {
+    right: 0rem;
   }
-  
+}
+
+@media (max-width: 768px) {
+  .experience-container {
+    margin: 2rem 0;
+  }
+
+  .experience-container h5 {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+
+  .arrow-left {
+    left: -1rem;
+  }
+
+  .arrow-right {
+    right: -1rem;
+  }
+}

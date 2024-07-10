@@ -1,12 +1,37 @@
+/* General container adjustments for centering and full width on smaller screens */
 .container {
-    max-width: 1300px !important;
-    margin: 0 auto !important;
-    position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  position: relative;
 }
 
-@media(max-width:1300px){
-    .container{
+@media (max-width: 1025px) {
+  .container {
+    padding: 1rem;
+  }
+}
 
-        padding: 1.5rem;
-    }
+@media (max-width: 768px) {
+  .container {
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0.5rem;
+  }
+}
+
+/* Adjustments for the sections to ensure full width on smaller screens */
+.section {
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 768px) {
+  .section {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 }

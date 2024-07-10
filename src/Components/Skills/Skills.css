@@ -1,8 +1,9 @@
 .skills-container {
-    margin: 4rem 0;
-    position: relative;
-  }
-  .skills-container::after,
+  margin: 4rem 0;
+  position: relative;
+}
+
+.skills-container::after,
 .skills-container::before {
   content: " ";
   width: 28rem;
@@ -25,68 +26,88 @@
   right: 0rem;
 }
 
+.skills-container h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 3.5rem;
+}
 
+.skills-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+}
 
+.skills {
+  flex: 1;
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+}
 
+.skills-info {
+  flex: 1;
+}
 
-
-  .skills-container h5 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 3.5rem;
+@media (max-width: 1025px) {
+  .skills {
+    padding-left: 1rem;
   }
-  
+
+  .skills,
   .skills-content {
-    display: flex;
-    align-items: flex-start;
+    grid-gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-content {
+    flex-direction: column-reverse;
     gap: 3rem;
   }
-  
-  .skills {
-    flex: 1;
-    display: grid;
-    grid-gap: 3rem;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .skills-info{
-    flex: 1;
+
+  .skills,
+  .skills-info {
+    width: 100%;
   }
 
-  @media (max-width: 1025px) {
-    .skills {
-      padding-left: 1rem;
-    }
-  
-    .skills,
-    .skills-content {
-      grid-gap: 2rem;
-    }
+  .skills-container h5 {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
   }
-  @media (max-width: 768px) {
-    .skills-content {
-      flex-direction: column-reverse;
-      gap: 3rem;
-    }
-  
-    .skills,
-    .skills-info {
-      width: 100%;
-    }
-  
-    .skills-container h5 {
-      font-size: 1.3rem;
-      margin-bottom: 2rem;
-    }
-  }
+
   .skills-container::after,
   .skills-container::before {
     width: 18rem;
     height: 18rem;
   }
-  
-  @media (max-width: 600px) {
-    .skills-container {
-      padding: 0;
-    }
+}
+
+@media (max-width: 600px) {
+  .skills-container {
+    padding: 0;
   }
-  
+
+  .skills-container::after,
+  .skills-container::before {
+    width: 12rem;
+    height: 12rem;
+  }
+}
+
+.technical-proficiency {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.technical-proficiency .skills {
+  width: 100%;
+  max-width: 600px;
+}
+
+@media (max-width: 768px) {
+  .technical-proficiency .skills {
+    max-width: 100%;
+  }
+}
