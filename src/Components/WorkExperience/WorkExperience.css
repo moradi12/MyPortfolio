@@ -1,13 +1,14 @@
 .experience-container {
   margin: 5rem 0;
   position: relative;
+  text-align: left;
 }
 
 .experience-container h5 {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 4rem;
-  text-align: center;
+  text-align: left;
   color: #ffffff;
 }
 
@@ -20,7 +21,7 @@
 .slick-list {
   display: flex;
   align-items: stretch;
-  height: 100%; /* Ensure the slick list takes full height */
+  height: 100%;
 }
 
 .slick-track {
@@ -31,13 +32,13 @@
 .slick-slide {
   display: flex;
   align-items: stretch;
-  height: auto; /* Ensure the slick slides take auto height */
+  height: auto;
 }
 
 .slick-slide > div {
   display: flex;
   flex: 1;
-  height: 100%; /* Ensure the slick slides take full height */
+  height: 100%;
 }
 
 .arrow-left,

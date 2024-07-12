@@ -14,15 +14,15 @@ export const SKILLS = [
     title: "Backend",
     icon: "/assets/images/backendicon.png",
     skills: [
-      { skill: "Java", percentage: "85%" },
-      { skill: "JavaSpring", percentage: "90%" },
+      { skill: "Java", percentage: "80%" },
+      { skill: "JavaSpring", percentage: "80%" },
     ],
   },
   {
     title: "Tools",
     icon: "/assets/images/toolsicon.png",
     skills: [
-      { skill: "Git & GitHub", percentage: "80%" },
+      { skill: "Git & GitHub", percentage: "75%" },
       { skill: "Visual Studio Code", percentage: "80%" },
       { skill: "Npm", percentage: "75%" },
       { skill: "MySQL", percentage: "75%" },
