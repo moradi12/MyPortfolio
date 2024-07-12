@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   position: relative;
-  padding: 2rem; /* Add padding for better spacing */
+  padding: 2rem;
 }
 
 .hero-container::after,
@@ -52,6 +52,7 @@
   align-items: center;
   gap: 2rem;
   margin-top: 5rem;
+  position: relative;
 }
 
 .hero-img > img {
@@ -61,17 +62,41 @@
   transition: all 0.3s ease;
 }
 
+.tech-icons-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  right: -6rem;
+  top: 5rem;
+  gap: 1rem;
+}
+
+.hero-img .tech-icon-right {
+  width: 5rem;
+  height: 5rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border: 2px solid #ccc;
+  padding: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
 .tech-icons {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-top: 1rem; 
+  margin-top: 1rem;
 }
 
 .tech-icons > img {
   width: 5rem;
   height: 5rem;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  border: 2px solid #ccc;
+  padding: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 .tech-icons > img:hover {
@@ -93,6 +118,13 @@
   .tech-icons > img {
     width: 4rem;
     height: 4rem;
+    padding: 0.4rem;
+  }
+
+  .hero-img .tech-icon-right {
+    width: 4rem;
+    height: 4rem;
+    padding: 0.4rem;
   }
 }
 
@@ -116,6 +148,22 @@
   .hero-container .tech-icons img {
     margin: 10px; 
     width: 50px; 
+    height: 50px; 
+    padding: 0.5rem;
+  }
+
+  .tech-icons-right {
+    flex-direction: row;
+    gap: 0.5rem;
+    right: auto;
+    top: -6rem;
+    margin-top: 10px;
+  }
+
+  .hero-img .tech-icon-right {
+    width: 50px; 
+    height: 50px; 
+    padding: 0.5rem;
   }
 }
 
@@ -134,5 +182,12 @@
   .tech-icons > img {
     width: 3rem;
     height: 3rem;
+    padding: 0.3rem;
+  }
+
+  .hero-img .tech-icon-right {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.3rem;
   }
 }

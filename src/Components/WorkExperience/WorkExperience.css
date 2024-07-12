@@ -7,6 +7,37 @@
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 4rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.experience-slider {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.slick-list {
+  display: flex;
+  align-items: stretch;
+  height: 100%; /* Ensure the slick list takes full height */
+}
+
+.slick-track {
+  display: flex;
+  align-items: stretch;
+}
+
+.slick-slide {
+  display: flex;
+  align-items: stretch;
+  height: auto; /* Ensure the slick slides take auto height */
+}
+
+.slick-slide > div {
+  display: flex;
+  flex: 1;
+  height: 100%; /* Ensure the slick slides take full height */
 }
 
 .arrow-left,
@@ -17,7 +48,7 @@
   align-items: center;
   justify-content: center;
   color: #6751b9;
-  border-radius: 0.75rem;
+  border-radius: 50%;
   border: 2px solid #6751b9;
   background: #130f2a;
   position: absolute;
@@ -25,6 +56,12 @@
   z-index: 2;
   cursor: pointer;
   transform: translateY(-50%);
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+  background: #6751b9;
+  transform: translateY(-50%) scale(1.1);
 }
 
 .arrow-left span,

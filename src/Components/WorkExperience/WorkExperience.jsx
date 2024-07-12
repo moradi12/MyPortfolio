@@ -15,7 +15,7 @@ const WorkExperience = () => {
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000, // 3 seconds
+    autoplaySpeed: 3000,
     arrows: false,
     responsive: [
       {
@@ -38,7 +38,7 @@ const WorkExperience = () => {
 
   return (
     <section id="experience" className="experience-container">
-      <h5 className="experience-title">Work Experience + Education</h5>
+      <h5 className="experience-title">Work Experience & Education</h5>
       <div className="experience-slider">
         <div className="arrow-left" onClick={slideLeft}>
           <FontAwesomeIcon icon={faChevronLeft} />

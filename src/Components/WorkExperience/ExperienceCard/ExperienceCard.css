@@ -1,85 +1,114 @@
-.work-experience-card {
+.experience-card {
   background: #130f2a;
-  border-radius: 0.65rem;
-  border: 1.5px solid #6751b9;
+  border-radius: 1rem;
+  border: 2px solid #6751b9;
   padding: 1.5rem;
-  margin: 0 1rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.work-experience-card h6 {
-  font-size: 1.05rem;
-  font-weight: 500;
-  margin-bottom: 0.7rem;
+.experience-card:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.work-duration {
-  display: inline-block;
-  font-size: 0.7rem;
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #6751b9;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.experience-header h6 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.experience-duration {
+  font-size: 0.9rem;
   font-weight: 400;
   background: rgba(103, 81, 185, 0.5);
   border-radius: 0.3rem;
   padding: 0.4rem 0.6rem;
-  margin-bottom: 1.3rem;
+  color: #ffffff;
 }
 
-.work-experience-card ul li {
+.experience-body {
+  flex-grow: 1; /* Allows the body to take available space */
+}
+
+.experience-body ul {
   list-style: none;
-  font-size: 0.8rem;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-body ul li {
+  font-size: 1rem;
   font-weight: 400;
+  color: #e0e0e0;
   margin-bottom: 0.5rem;
   position: relative;
+  padding-left: 1.5rem;
 }
 
-.work-experience-card ul li::after {
+.experience-body ul li::before {
   content: "";
   width: 0.5rem;
   height: 0.5rem;
   background-color: #6751b9;
-  border-radius: 0.5rem;
+  border-radius: 50%;
   position: absolute;
-  left: -1.3rem;
-  top: 0.35rem;
+  left: 0;
+  top: 0.2rem;
 }
 
 @media (max-width: 1025px) {
-  .work-experience-card {
+  .experience-card {
     padding: 1rem;
     margin: 0.5rem;
   }
 
-  .work-experience-card h6 {
+  .experience-header h6 {
     font-size: 1rem;
   }
 
-  .work-duration {
-    font-size: 0.65rem;
+  .experience-duration {
+    font-size: 0.75rem;
   }
 
-  .work-experience-card ul li {
-    font-size: 0.75rem;
+  .experience-body ul li {
+    font-size: 0.8rem;
   }
 }
 
 @media (max-width: 768px) {
-  .work-experience-card {
-    margin: 0;
+  .experience-card {
     padding: 1rem;
+    margin: 0;
   }
 
-  .work-experience-card h6 {
+  .experience-header h6 {
     font-size: 0.95rem;
   }
 
-  .work-duration {
-    font-size: 0.65rem;
+  .experience-duration {
+    font-size: 0.7rem;
     padding: 0.3rem 0.5rem;
   }
 
-  .work-experience-card ul li {
+  .experience-body ul li {
     font-size: 0.75rem;
   }
 
-  .work-experience-card ul li::after {
+  .experience-body ul li::before {
     left: -1rem;
     top: 0.3rem;
   }

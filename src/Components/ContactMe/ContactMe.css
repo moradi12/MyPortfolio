@@ -1,31 +1,67 @@
 .contact-container {
   margin: 4rem 0;
   position: relative;
+  background: #130f2a; /* New background color */
+  padding: 2rem;
+  border-radius: 8px;
 }
 
 .contact-container h5 {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 3rem;
+  text-align: center;
+  color: #ffffff;
 }
 
 .contact-content {
   display: flex;
+  justify-content: space-between;
   gap: 3rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+  border-radius: 8px;
+  background: #3d3072;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.contact-icon {
+  margin-right: 1rem;
+  width: 32px;
+  height: 32px;
+}
+
+.contact-text {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.contact-link:hover .contact-text {
+  text-decoration: underline;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 500px;
 }
 
 .contact-content a.email-link,
 .contact-content a.linkedin-link,
 .contact-content a.github-link {
-  font-size: 1.5rem; 
   color: white; 
-  text-decoration: none;
-}
-
-.contact-content a.email-link:hover,
-.contact-content a.linkedin-link:hover,
-.contact-content a.github-link:hover {
-  text-decoration: underline;
+  font-size: 1.2rem; 
 }
 
 @media (max-width: 1025px) {
@@ -36,6 +72,19 @@
 
   .contact-content {
     gap: 2rem;
+  }
+
+  .contact-info {
+    padding: 1.5rem;
+  }
+
+  .contact-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .contact-text {
+    font-size: 1.3rem;
   }
 
   .contact-content a.email-link,
@@ -56,6 +105,19 @@
     margin-bottom: 1.5rem;
   }
 
+  .contact-info {
+    align-items: center;
+  }
+
+  .contact-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .contact-text {
+    font-size: 1.2rem;
+  }
+
   .contact-content a.email-link,
   .contact-content a.linkedin-link,
   .contact-content a.github-link {
@@ -71,6 +133,15 @@
 
   .contact-content {
     gap: 1rem;
+  }
+
+  .contact-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contact-text {
+    font-size: 1rem;
   }
 
   .contact-content a.email-link,

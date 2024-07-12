@@ -2,17 +2,21 @@ import React from 'react';
 import './ExperienceCard.css';
 
 const ExperienceCard = ({ details }) => {
-    return (
-      <div className="work-experience-card">
+  return (
+    <div className="experience-card">
+      <div className="experience-header">
         <h6>{details.title}</h6>
-        <div className="work-duration">{details.date}</div>
+        <span className="experience-duration">{details.date}</span>
+      </div>
+      <div className="experience-body">
         <ul>
           {details.responsibilities.map((item) => (
             <li key={item}>{item}</li>
           ))}
         </ul>
       </div>
-    );
-  };
-  
-  export default ExperienceCard;
+    </div>
+  );
+};
+
+export default ExperienceCard;

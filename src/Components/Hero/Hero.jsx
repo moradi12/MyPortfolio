@@ -14,14 +14,16 @@ const Hero = () => {
 
       <div className="hero-img">
         <img src="./assets/images/hero.jpg" alt="Hero" />
+        <div className="tech-icons-right">
+          <img src="./assets/images/spring.png" alt="Spring" className="tech-icon-right spring" />
+          <img src="./assets/images/react.png" alt="React" className="tech-icon-right react" />
+          <img src="./assets/images/java.png" alt="Java" className="tech-icon-right java" />
+        </div>
         <div className="tech-icons">
-          <img src="./assets/images/spring.png" alt="Spring" />
-          <img src="./assets/images/js.png" alt="js" />
-          <img src="./assets/images/mysql.png" alt="mysql" />
+          <img src="./assets/images/js.png" alt="JavaScript" />
+          <img src="./assets/images/mysql.png" alt="MySQL" />
           <img src="./assets/images/ts.png" alt="TypeScript" />
           <img src="./assets/images/css.png" alt="CSS" />
-          <img src="./assets/images/java.png" alt="Java" />
-          <img src="./assets/images/react.png" alt="React" />
         </div>
       </div>
     </section>
