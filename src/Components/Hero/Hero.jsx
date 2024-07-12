@@ -5,11 +5,18 @@ const Hero = () => {
   return (
     <section className="hero-container">
       <div className="hero-content">
-        <h2>Building Digital Experiences That Inspire</h2>
+        <h2>Creating Unique Web Experiences</h2>
         <p>
-          Passionate Frontend Developer | Transforming Ideas into Seamless and
-          Visually Stunning Web Solutions
+          Passionate Frontend Developer | Bringing Ideas to Life with Elegant Designs
         </p>
+        <div className="about-me">
+          <h3>About Me</h3>
+          <ul>
+            <li><strong>Dedicated and innovative Full Stack Developer</strong> with a strong passion for creating impactful web solutions.</li>
+            <li>My journey in web development has equipped me with the skills and knowledge to transform ideas into functional and visually appealing websites.</li>
+            <li>Whether working on the frontend or backend, I strive to deliver seamless user experiences and efficient solutions.</li>
+          </ul>
+        </div>
       </div>
 
       <div className="hero-img">
