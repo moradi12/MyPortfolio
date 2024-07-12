@@ -158,9 +158,16 @@
 
 @media (max-width: 768px) {
   .hero-container {
-    flex-direction: column;
+    flex-direction: column-reverse; /* Change the order of elements */
     align-items: center;
     text-align: center;
+    padding: 1rem;
+  }
+
+  .hero-container h2 {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    margin-top: 1rem; /* Add margin to move the heading down */
   }
 
   .hero-container img {
@@ -193,12 +200,34 @@
     height: 50px; 
     padding: 0.5rem;
   }
+
+  .about-me {
+    padding: 1rem;
+    margin-left: 0;
+  }
+
+  .about-me h3 {
+    font-size: 1.5rem;
+  }
+
+  .about-me ul {
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+  }
 }
 
 @media (max-width: 600px) {
+  .hero-container {
+    flex-direction: column-reverse; /* Change the order of elements */
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem;
+  }
+
   .hero-container h2 {
-    font-size: 2.5rem;
-    line-height: 3.5rem;
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-top: 2rem; /* Add margin to move the heading down */
   }
 
   .hero-container p {
@@ -207,15 +236,28 @@
     width: 100%;
   }
 
+  .about-me {
+    padding: 0.5rem;
+  }
+
+  .about-me h3 {
+    font-size: 1.2rem;
+  }
+
+  .about-me ul {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+
   .tech-icons > img {
-    width: 3rem;
-    height: 3rem;
-    padding: 0.3rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.2rem;
   }
 
   .hero-img .tech-icon-right {
-    width: 3rem;
-    height: 3rem;
-    padding: 0.3rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.2rem;
   }
 }
