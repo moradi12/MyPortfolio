@@ -55,9 +55,9 @@ const ContactForm = () => {
                     <input type="text" name="firstname" placeholder="First Name" required />
                     <input type="text" name="lastname" placeholder="Last Name" required />
                 </div>
-                <input type="email" name="email" placeholder="Email" required />
-                <textarea name="message" placeholder="Message" rows={3} required />
-                <button type="submit">SEND</button>
+                <input type="email" name="email" placeholder="Your Email" required />
+                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
             </form>
             <span>{result}</span>
         </div>
