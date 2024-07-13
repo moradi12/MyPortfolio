@@ -14,8 +14,7 @@ const ContactMe = () => {
             rel="noopener noreferrer"
             className="contact-link email-link"
           >
-            <img src="./assets/images/mail.png" alt="Email" className="contact-icon" />
-            <span className="contact-text">TamirMoradi@Gmail.com</span>
+            <img src="assets/images/mail.png" alt="Email" className="contact-icon" />
           </a>
           <a 
             href="https://github.com/moradi12" 
@@ -23,8 +22,7 @@ const ContactMe = () => {
             rel="noopener noreferrer"
             className="contact-link github-link"
           >
-            <img src="./assets/images/Github.png" alt="GitHub" className="contact-icon" />
-            <span className="contact-text">github.com/moradi12</span>
+            <img src="assets/images/Github.png" alt="GitHub" className="contact-icon" />
           </a>
           <a 
             href="https://www.linkedin.com/in/tamir-moradi-1a62b0260/" 
@@ -32,11 +30,10 @@ const ContactMe = () => {
             rel="noopener noreferrer"
             className="contact-link linkedin-link"
           >
-            <img src="./assets/images/Linkedin.png" alt="LinkedIn" className="contact-icon" />
-            <span className="contact-text">LinkedIn/Tamir Moradi</span>
+            <img src="assets/images/Linkedin.png" alt="LinkedIn" className="contact-icon" />
           </a>
         </div>
-        <div className="contact-form">
+        <div className="contact-form-container">
           <ContactForm />
         </div>
       </div>
