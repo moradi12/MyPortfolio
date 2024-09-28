@@ -1,8 +1,6 @@
-import React from "react";
 import "./Footer.css";
 
 const Footer = () => {
-    return <div className="footer">© 2024 Time To Program, Happy Coding</div>;
-};
+    return <div className="footer">© {new Date().getFullYear()} Tamir Moradi. Crafted with passion and dedication.</div>;};
 
 export default Footer;
