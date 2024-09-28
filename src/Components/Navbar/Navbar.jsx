@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import MobileNav from "./MobileNav/MobileNav";
 import "./Navbar.css";
 
@@ -24,6 +24,11 @@ const Navbar = () => {
             <li>
               <a className="menu-item" href="#skills">
                 Skills
+              </a>
+            </li>
+            <li>
+              <a className="menu-item" href="#projects">
+                Projects
               </a>
             </li>
             <li>

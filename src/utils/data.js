@@ -4,7 +4,7 @@ export const SKILLS = [
     icon: "/assets/images/frontendicon.png",
     skills: [
       { skill: "HTML5", percentage: "75%" },
-      { skill: "CSS", percentage: "75%" },
+      { skill: "CSS", percentage: "80%" },
       { skill: "JavaScript", percentage: "75%" },
       { skill: "React.js", percentage: "70%" },
       { skill: "TypeScript ", percentage: "70%" },
@@ -22,10 +22,10 @@ export const SKILLS = [
     title: "Tools",
     icon: "/assets/images/toolsicon.png",
     skills: [
-      { skill: "Git & GitHub", percentage: "75%" },
+      { skill: "Git & GitHub", percentage: "80%" },
       { skill: "Visual Studio Code", percentage: "80%" },
-      { skill: "Npm", percentage: "75%" },
-      { skill: "MySQL", percentage: "75%" },
+      { skill: "Npm", percentage: "80%" },
+      { skill: "MySQL", percentage: "85%" },
       { skill: "IntelliJ IDEA", percentage: "80%" },
     ],
   },
@@ -103,7 +103,6 @@ export const WORK_EXPERIENCE = [
 
 
 
-
 ];
 
 export const EDUCATION = [
@@ -127,3 +126,23 @@ export const EDUCATION = [
     ],
   },
 ];
+
+
+export const PROJECTS = [
+  {
+    title: "Hotel Management System",
+    description:
+      "A comprehensive web application designed to streamline hotel operations and enhance customer experiences with features for both customers and administrators. Users can book rooms, view booking history, and manage profiles. Admins have access to room management and service updates.",
+    technologies: ["React.js", "Java", "Spring Boot", "MySQL", "JWT", "Notyf"],
+    link: "https://github.com/moradi12/Hotel-Project.git",
+  },
+  {
+    title: "Coupon Management System",
+    description:
+      "A web application that simplifies the creation, management, and redemption of coupons. Customers can view and redeem available coupons, while admins can create, update, and delete coupons, manage customer information, and view coupon usage analytics.",
+    technologies: ["React.js", "Java", "Spring Boot", "MySQL", "JWT"],
+    link: "https://github.com/moradi12/Completed-Coupon-Project",
+  },
+];
+
+
