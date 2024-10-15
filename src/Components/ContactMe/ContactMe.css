@@ -187,3 +187,38 @@
     font-size: 1.2rem;
   }
 }
+.resume-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 50%;  /* Match the other icons' shape */
+  background: #2b1b56;  /* Same background as other icons */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.resume-link:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.resume-link button {
+  background: none;  /* Transparent background */
+  color: #ffffff;
+  border: none;
+  font-size: 1rem;  /* Match size to other icons */
+  cursor: pointer;
+  padding: 0;
+}
+
+.resume-link:hover button {
+  color: #a04ff4;  /* Text color change on hover */
+}
+.contact-link .contact-label {
+  display: block;
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
