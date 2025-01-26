@@ -11,10 +11,15 @@ const Navbar = () => {
 
   return (
     <>
+      {/* Mobile Navigation Overlay */}
       <MobileNav isOpen={openMenu} toggleMenu={toggleMenu} />
+
+      {/* Main Navigation Bar */}
       <nav className="nav-wrapper">
         <div className="nav-content">
           <img className="logo" src="./assets/images/Logo.png" alt="Logo" />
+
+          {/* Desktop Menu Links */}
           <ul className="nav-links">
             <li>
               <a className="menu-item" href="#home">
@@ -42,11 +47,10 @@ const Navbar = () => {
               </a>
             </li>
           </ul>
+
+          {/* Hamburger / Close Button */}
           <button className="menu-btn" onClick={toggleMenu}>
-            <span
-              className="material-symbols-outlined"
-              style={{ fontSize: "1.8rem" }}
-            >
+            <span className="material-symbols-outlined nav-icon">
               {openMenu ? "close" : "menu"}
             </span>
           </button>

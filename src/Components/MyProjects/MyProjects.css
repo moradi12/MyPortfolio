@@ -1,8 +1,10 @@
+/* MyProjects.css */
 
+/* Container Styles */
 .project-section-container {
     margin: 5rem 0;
     padding: 3rem 4rem;
-    background-color: #130f2a;
+    background-color: #1a142d; /* Darker background for contrast */
     border-radius: 15px;
     position: relative;
     text-align: left;
@@ -18,11 +20,10 @@
 
 /* Projects Slider */
 .project-section-slider {
-    display: flex;
-    align-items: stretch;
-    flex-direction: column;
+    position: relative; /* Ensure arrows are positioned relative to this container */
 }
 
+/* Slick Slider Overrides */
 .slick-list,
 .slick-track,
 .slick-slide {
@@ -37,10 +38,8 @@
     height: 100%;
 }
 
-/* Project Card */
+/* Project Card Base Styles */
 .project-card-section {
-    background: linear-gradient(135deg, #2d2541, #4b4378); 
-    border: 2px solid #6751b9;
     border-radius: 15px;
     padding: 2.5rem;
     margin: 0 20px;
@@ -48,14 +47,52 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Slightly darker shadow for depth */
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    color: #f0f0f0; /* Light text for readability */
 }
 
 .project-card-section:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); 
-    background: linear-gradient(135deg, #4b4378, #6751b9); 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Variant 0: Vibrant Blue Gradient */
+.project-card-0 {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    border: 2px solid #2a5298;
+}
+
+.project-card-0:hover {
+    background: linear-gradient(135deg, #2a5298, #1e3c72);
+}
+
+/* Variant 1: Electric Purple Gradient */
+.project-card-1 {
+    background: linear-gradient(135deg, #6a3093, #a044ff);
+    border: 2px solid #a044ff;
+}
+
+.project-card-1:hover {
+    background: linear-gradient(135deg, #a044ff, #6a3093);
+}
+
+/* Variant 2: Neon Coral Gradient */
+.project-card-2 {
+    background: linear-gradient(135deg, #8a1682, #ff4b2b);
+    border: 2px solid #ff4b2b;
+}
+
+.project-card-2:hover {
+    background: linear-gradient(135deg, #ff4b2b, #8a1682);
+}
+
+/* Project Icon (Optional) */
+.project-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+    /* Optional: Add shadow or other effects */
 }
 
 /* Project Title */
@@ -89,19 +126,20 @@
 /* Technology Item */
 .project-technology-item {
     display: inline-block;
-    background-color: #51408e; 
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
     color: #ffffff;
     border-radius: 20px;
     padding: 10px 15px;
     margin: 5px 5px;
     font-size: 1rem;
+    backdrop-filter: blur(5px); /* Adds a glassmorphism effect */
 }
 
 /* Project Link */
 .project-section-link {
     display: inline-block;
-    background-color: #51408e;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #0f0e1d;
     text-decoration: none;
     padding: 15px 30px;
     border-radius: 5px;
@@ -109,11 +147,12 @@
     font-weight: 600;
     margin-top: 15px;
     text-align: center;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
 }
 
 .project-section-link:hover {
-    background-color: #6751b9;
+    background-color: #a044ff;
+    color: #ffffff;
     transform: scale(1.05);
 }
 
@@ -125,30 +164,26 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #6751b9;
+    color: #ffffff;
     border-radius: 50%;
-    border: 2px solid #6751b9;
-    background: #2d2541; /* Slightly lighter background */
+    border: 2px solid #a044ff;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
     position: absolute;
     top: 50%;
     z-index: 2;
     cursor: pointer;
     transform: translateY(-50%);
-    transition: background 0.3s ease, transform 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
 }
 
 .project-arrow-left:hover,
 .project-arrow-right:hover {
-    background: #6751b9;
+    background: #a044ff;
+    color: #ffffff;
     transform: translateY(-50%) scale(1.1);
 }
 
-.project-arrow-left span,
-.project-arrow-right span {
-    font-size: 3rem;
-    font-weight: 500;
-}
-
+/* Positioning Arrows */
 .project-arrow-left {
     left: -3.5rem;
 }
@@ -157,7 +192,7 @@
     right: -3.5rem;
 }
 
-/* Tablet View */
+/* Adjust Arrow Positioning for Tablet */
 @media (max-width: 1025px) {
     .project-arrow-left {
         left: -2rem;
@@ -168,7 +203,7 @@
     }
 }
 
-/* Mobile View */
+/* Adjust Styles for Mobile */
 @media (max-width: 768px) {
     .project-section-container {
         margin: 3rem 0;

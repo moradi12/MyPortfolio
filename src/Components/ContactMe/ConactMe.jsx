@@ -1,47 +1,57 @@
-import { FaFileDownload } from 'react-icons/fa'; // Only import the resume icon
+// ContactMe.jsx
+
+import { FaEnvelope, FaFileDownload, FaGithub, FaLinkedin } from 'react-icons/fa';
 import ContactForm from "./ContactForm/ContactForm";
 import "./ContactMe.css";
 
 const ContactMe = () => {
   return (
     <section id="contact" className="contact-container">
-      <h5>Contact Me</h5>
+      <h2 className="contact-title">Get in Touch</h2>
       <div className="contact-content">
         <div className="contact-info">
           {/* Email Icon */}
           <a 
             href="mailto:TamirMoradi@Gmail.com"
-            target="_blank" 
-            rel="noopener noreferrer"
             className="contact-link email-link"
+            aria-label="Send an email to Tamir Moradi"
           >
-            <img src="assets/images/mail.png" alt="Email" className="contact-icon" />
+            <FaEnvelope className="contact-icon" />
+            <span className="contact-label">Email</span>
           </a>
+
           {/* GitHub Icon */}
           <a 
             href="https://github.com/moradi12" 
-            target="_blank" 
-            rel="noopener noreferrer"
             className="contact-link github-link"
+            aria-label="Visit my GitHub profile"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <img src="assets/images/Github.png" alt="GitHub" className="contact-icon" />
+            <FaGithub className="contact-icon" />
+            <span className="contact-label">GitHub</span>
           </a>
+
           {/* LinkedIn Icon */}
           <a 
             href="https://www.linkedin.com/in/tamir-moradi-1a62b0260/" 
-            target="_blank" 
-            rel="noopener noreferrer"
             className="contact-link linkedin-link"
+            aria-label="Connect with me on LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <img src="assets/images/Linkedin.png" alt="LinkedIn" className="contact-icon" />
+            <FaLinkedin className="contact-icon" />
+            <span className="contact-label">LinkedIn</span>
           </a>
-          {/* Resume Download Button with React Icon */}
+
+          {/* Resume Download Button */}
           <a 
-            href="/TAMIR MORADI.pdf"
+            href="/TAMIR_MORADI.pdf"
             download="Tamir-Moradi-Resume.pdf"
             className="contact-link resume-link"
+            aria-label="Download my resume"
           >
-            <FaFileDownload size={48} style={{ color: '#d048d5' }} /> {}
+            <FaFileDownload className="resume-icon" />
             <span className="contact-label">Resume</span>
           </a>
         </div>

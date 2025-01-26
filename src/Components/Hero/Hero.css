@@ -1,13 +1,19 @@
+/* ================================
+  Hero Container & Background
+================================ */
+
 .hero-container {
+  /* Layout */
   display: flex;
   align-items: center;
   position: relative;
   padding: 2rem;
-}
 
+  /* This pseudo-element creates a blurred circle background */
+}
 .hero-container::after,
 .hero-container::before {
-  content: " ";
+  content: "";
   width: 28.125rem;
   height: 28.125rem;
   border-radius: 28.125rem;
@@ -16,29 +22,33 @@
   z-index: -1;
   filter: blur(225px);
 }
-
-.hero-content {
-  flex: 1;
-}
-
+/* Positioning of the blurred circles */
 .hero-container::after {
   top: -3rem;
   left: -5rem;
 }
-
 .hero-container::before {
   bottom: 2rem;
-  right: 0rem;
+  right: 0;
 }
 
+/* ================================
+  Hero Content
+================================ */
+.hero-content {
+  flex: 1;
+}
+
+/* Heading (H2) within the Hero */
 .hero-container h2 {
   font-size: 3.8rem;
   font-weight: 600;
   line-height: 5rem;
   margin-bottom: 1rem;
-  margin-top: -2rem; /* Adjust the top margin as need */
+  margin-top: -2rem; /* Adjust this as needed for your layout */
 }
 
+/* Paragraph within the Hero */
 .hero-container p {
   width: 80%;
   font-size: 1rem;
@@ -46,34 +56,46 @@
   line-height: 2rem;
 }
 
+/* ================================
+  About Me Section
+================================ */
 .about-me {
+  /* Spacing & Layout */
   margin-top: 2rem;
-  margin-left: -1rem; /* Move the About Me section to the left */
+  margin-left: -1rem; /* Pulls 'About Me' slightly to the left */
   padding: 1.5rem;
+  max-width: 600px;
+
+  /* Styling */
   background: rgba(124, 102, 227, 0.1);
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  color: white; /* Added font color */
+  color: #fff;
 }
 
+/* About Me Header */
 .about-me h3 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
-  color: #ccc9d9f9;
+  color: #ccc9d9f9; /* Slightly lighter grayish-lavender text */
   border-bottom: 2px solid #cecae1;
   padding-bottom: 0.5rem;
 }
 
+/* About Me List */
 .about-me ul {
+  list-style-type: disc;
+  padding-left: 20px;
   font-size: 1.1rem;
   line-height: 2.4rem;
   color: #ede6e6;
-  list-style-type: disc;
-  padding-left: 20px;
 }
 
+/* ================================
+  Hero Image & Tech Icons
+================================ */
 .hero-img {
+  /* Layout */
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -83,13 +105,15 @@
   position: relative;
 }
 
+/* Main Hero Image */
 .hero-img > img {
+  max-width: 400px;
   width: 100%;
-  max-width: 400px; 
   height: auto;
   transition: all 0.3s ease;
 }
 
+/* Icons stacked along the right side of the hero image */
 .tech-icons-right {
   display: flex;
   flex-direction: column;
@@ -100,38 +124,48 @@
   gap: 1rem;
 }
 
+/* Individual Tech Icons on the right */
 .hero-img .tech-icon-right {
   width: 5rem;
   height: 5rem;
-  transition: transform 0.3s ease, opacity 0.3s ease;
   border: 2px solid #ccc;
-  padding: 0.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* Icons at the bottom (e.g., JS, MySQL, TS, CSS) */
 .tech-icons {
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
 }
-
 .tech-icons > img {
   width: 5rem;
   height: 5rem;
-  transition: transform 0.3s ease, opacity 0.3s ease;
   border: 2px solid #ccc;
-  padding: 0.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* Hover effect for bottom icons */
 .tech-icons > img:hover {
   transform: scale(1.1);
   opacity: 0.8;
 }
 
+/* ================================
+  Media Queries
+================================ */
+
+/* 
+  Large Tablet / Small Laptop
+  (Max width: 1025px)
+-------------------------------- */
 @media (max-width: 1025px) {
   .hero-container h2 {
     font-size: 3rem;
@@ -156,9 +190,13 @@
   }
 }
 
+/* 
+  Tablet Portrait
+  (Max width: 768px)
+-------------------------------- */
 @media (max-width: 768px) {
   .hero-container {
-    flex-direction: column-reverse; /* Change the order of elements */
+    flex-direction: column-reverse; /* Stack content, image after text */
     align-items: center;
     text-align: center;
     padding: 1rem;
@@ -167,7 +205,7 @@
   .hero-container h2 {
     font-size: 2.5rem;
     line-height: 3.5rem;
-    margin-top: 1rem; /* Add margin to move the heading down */
+    margin-top: 1rem; /* Move heading down a bit */
   }
 
   .hero-container img {
@@ -181,9 +219,9 @@
   }
 
   .hero-container .tech-icons img {
-    margin: 10px; 
-    width: 50px; 
-    height: 50px; 
+    width: 50px;
+    height: 50px;
+    margin: 10px;
     padding: 0.5rem;
   }
 
@@ -196,14 +234,14 @@
   }
 
   .hero-img .tech-icon-right {
-    width: 50px; 
-    height: 50px; 
+    width: 50px;
+    height: 50px;
     padding: 0.5rem;
   }
 
   .about-me {
-    padding: 1rem;
     margin-left: 0;
+    padding: 1rem;
   }
 
   .about-me h3 {
@@ -216,9 +254,13 @@
   }
 }
 
+/* 
+  Mobile (Small)
+  (Max width: 600px)
+-------------------------------- */
 @media (max-width: 600px) {
   .hero-container {
-    flex-direction: column-reverse; /* Change the order of elements */
+    flex-direction: column-reverse;
     align-items: center;
     text-align: center;
     padding: 0.5rem;
@@ -227,13 +269,13 @@
   .hero-container h2 {
     font-size: 2rem;
     line-height: 3rem;
-    margin-top: 2rem; /* Add margin to move the heading down */
+    margin-top: 2rem; /* Move heading down a bit more */
   }
 
   .hero-container p {
+    width: 100%;
     font-size: 0.8rem;
     line-height: 1.3rem;
-    width: 100%;
   }
 
   .about-me {

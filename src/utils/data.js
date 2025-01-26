@@ -1,3 +1,5 @@
+// data.js
+
 export const SKILLS = [
   {
     title: "Frontend",
@@ -5,9 +7,9 @@ export const SKILLS = [
     skills: [
       { skill: "HTML5", percentage: "75%" },
       { skill: "CSS", percentage: "80%" },
-      { skill: "JavaScript", percentage: "75%" },
-      { skill: "React.js", percentage: "70%" },
-      { skill: "TypeScript ", percentage: "70%" },
+      { skill: "JavaScript", percentage: "80%" },
+      { skill: "React.js", percentage: "80%" },
+      { skill: "TypeScript", percentage: "85%" },
     ],
   },
   {
@@ -15,7 +17,7 @@ export const SKILLS = [
     icon: "/assets/images/backendicon.png",
     skills: [
       { skill: "Java", percentage: "80%" },
-      { skill: "JavaSpring", percentage: "80%" },
+      { skill: "Spring Framework", percentage: "80%" },
     ],
   },
   {
@@ -24,18 +26,21 @@ export const SKILLS = [
     skills: [
       { skill: "Git & GitHub", percentage: "80%" },
       { skill: "Visual Studio Code", percentage: "80%" },
-      { skill: "Npm", percentage: "80%" },
+      { skill: "npm", percentage: "80%" },
       { skill: "MySQL", percentage: "85%" },
-      { skill: "IntelliJ IDEA", percentage: "80%" },
+      { skill: "IntelliJ IDEA", percentage: "85%" },
     ],
   },
-  { 
+  {
     title: "Soft Skills",
     icon: "/assets/images/softskillsicon.png",
     skills: [
-      { skill: "Problem-solving", percentage: "80%" },
+      { skill: "Problem-Solving", percentage: "80%" },
       { skill: "Collaboration", percentage: "85%" },
       { skill: "Attention to Detail", percentage: "80%" },
+      { skill: "Communication", percentage: "85%" },
+      { skill: "Adaptability", percentage: "80%" },
+      { skill: "Time Management", percentage: "80%" },
     ],
   },
 ];
@@ -46,13 +51,11 @@ export const WORK_EXPERIENCE = [
     company: "Noyhasade",
     date: "2020 - 2021",
     responsibilities: [
-      "Optimized supply chain efficiency and achieved cost savings.",
-      "Managed vendors and negotiated contracts.",
-      "Improved processes and workflows.",
-      "Leveraged IT solutions to enhance operational workflows.",
-      "Drove digital transformation.",
-      "Dedicated to driving operational excellence.",
-      "Maximized organizational value."
+      "Optimized supply chain efficiency, reducing costs.",
+      "Managed vendor relationships and negotiated favorable contracts.",
+      "Enhanced processes and workflows to increase productivity.",
+      "Implemented IT solutions to streamline operations and drive digital transformation.",
+      "Focused on operational excellence to maximize organizational value.",
     ],
   },
   {
@@ -60,49 +63,40 @@ export const WORK_EXPERIENCE = [
     company: "Bug Multisystem Ltd",
     date: "2018 - 2020",
     responsibilities: [
-      "Experienced sales professional with a proven record of exceeding targets and driving growth.",
-      "Strategic thinker with strong product knowledge and dedication to results.",
-      "Skilled in phone sales, building strong customer relationships, and providing exceptional service.",
-      "Recruited and trained new employees, fostering a productive team focused on customer service and retention for long-term success."
+      "Consistently exceeded sales targets and contributed to revenue growth.",
+      "Applied strategic thinking and in-depth product knowledge to close deals.",
+      "Strengthened customer relationships and provided exceptional service.",
+      "Recruited and trained new team members, boosting retention and long-term success.",
     ],
   },
   {
-    title: "FP&A Specialist at Israel Defense Forces",
+    title: "FP&A Specialist",
     company: "Israel Defense Forces Agency",
     date: "2015 - 2017",
     responsibilities: [
-      "Data Science and Analytics Lead at the Budget Department (Ministry of Defense) - Financial Advisor to the Chief of Staff",
-      "Skilled in building financial models, performing profitability analysis, costing, FP&A, effective negotiation, procurement, and vendor management."
+      "Served as Data Science and Analytics Lead in the Budget Department (Ministry of Defense), advising the Chief of Staff.",
+      "Built financial models, performed profitability analyses, and led FP&A initiatives.",
+      "Conducted effective negotiations, procurement, and vendor management to optimize resources.",
     ],
   },
-
-
-
-
   {
-    title: "Education-College of Management Academic Studies",
-    // institutions: "College of Management Academic Studies",
-    date: "2022-2023",
+    title: "Education – College of Management Academic Studies",
+    date: "2022 - 2023",
     responsibilities: [
-      "Completed a comprehensive program at the College of Management, enhancing my analytical skills, critical thinking, and understanding of economic principles and business strategies."
-       ,"This program prepared me for advanced studies and professional challenges in these fields.",
+      "Completed a comprehensive program in economics and business strategies, sharpening analytical and critical thinking skills.",
+      "Gained a strong foundation for advanced studies and professional challenges in business and management fields.",
     ],
   },
-
   {
-    title: "Education-John Bryce Training College",
-    // institutions: "John Bryce Training College",
-    date: "2023-2024",
+    title: "Education – John Bryce Training College",
+    date: "2023 - 2024",
     responsibilities: [
       "Developed web applications using Java, Spring Boot, and React.",
       "Designed RESTful APIs and utilized Redux for state management.",
       "Implemented JWT authentication and optimized SQL/NoSQL databases.",
-      "Ensured code quality through reviews and testing."
+      "Ensured code quality through reviews and testing.",
     ],
   },
-
-
-
 ];
 
 export const EDUCATION = [
@@ -111,38 +105,56 @@ export const EDUCATION = [
     institutions: [
       {
         name: "College of Management Academic Studies",
-        date: "2022-2023",
+        date: "2022 - 2023",
         responsibilities: [
-          "Preparatory Academic Program in Mathematics, Economics, and Business Administration",
+          "Preparatory Academic Program in Mathematics, Economics, and Business Administration.",
         ],
       },
       {
         name: "John Bryce Training College",
-        date: "2022-2023",
+        date: "2022 - 2023",
         responsibilities: [
-          "Java Full-stack developer",
-        ],  
+          "Java Full-Stack Developer Program.",
+        ],
       },
     ],
   },
 ];
 
-
 export const PROJECTS = [
   {
     title: "Hotel Management System",
     description:
-      "A comprehensive web application designed to streamline hotel operations and enhance customer experiences with features for both customers and administrators. Users can book rooms, view booking history, and manage profiles. Admins have access to room management and service updates.",
+      "A comprehensive web application for managing hotel operations and enhancing customer experiences. Customers can book rooms, review booking history, and manage profiles, while administrators oversee room management and update services.",
     technologies: ["React.js", "Java", "Spring Boot", "MySQL", "JWT", "Notyf"],
     link: "https://github.com/moradi12/Hotel-Project.git",
+    variant: "0", // Added variant
   },
   {
     title: "Coupon Management System",
     description:
-      "A web application that simplifies the creation, management, and redemption of coupons. Customers can view and redeem available coupons, while admins can create, update, and delete coupons, manage customer information, and view coupon usage analytics.",
-    technologies: ["React.js", "Java", "Spring Boot", "MySQL", "JWT"],
+      "A platform for creating, managing, and redeeming coupons. Customers can view available coupons and redeem them, while admins can create, update, and delete coupons, manage customer information, and view coupon usage analytics.",
+    technologies: ["React.js", "Java", "Spring Boot", "MySQL", "JWT", "Notyf", "Redux"],
     link: "https://github.com/moradi12/Completed-Coupon-Project",
+    variant: "1", // Added variant
+  },
+  {
+    title: "Recipe Book",
+    description:
+      "A modern web application for browsing, creating, and managing recipes. It features secure JWT-based authentication, real-time notifications, advanced search and filtering, and a responsive design for a seamless user experience.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Material-UI",
+      "Redux Toolkit",
+      "Spring Boot",
+      "MySQL",
+      "JWT",
+      "Kafka",
+      "Swagger",
+    ],
+    link: "https://github.com/moradi12/Recipe-Book",
+    variant: "3", // Added variant
   },
 ];
-
-

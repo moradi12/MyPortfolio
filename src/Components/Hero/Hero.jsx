@@ -1,4 +1,3 @@
-import React from "react";
 import "./Hero.css";
 
 const Hero = () => {
@@ -6,32 +5,53 @@ const Hero = () => {
     <section className="hero-container">
       <div className="hero-content">
         <h2>Creating Unique Web Experiences</h2>
-        <p>
-          Passionate Frontend Developer | Bringing Ideas to Life with Elegant Designs
-        </p>
+        <p>Full Stack Developer | Transforming Ideas into Engaging Applications</p>
+        
         <div className="about-me">
           <h3>About Me</h3>
           <ul>
             <li>
-              <strong>Dedicated Full Stack Developer</strong> specializing in back-end development with Java and Spring Boot, and front-end expertise in React and TypeScript. Passionate about creating scalable APIs and seamless user experiences.
+              <strong>Dedicated Full Stack Developer</strong> with expertise in
+              Java and Spring Boot for the backend, and React with TypeScript for
+              the frontend. Passionate about building scalable APIs and delivering
+              seamless user experiences.
             </li>
             <li>
-              My journey in web development has equipped me with the skills and knowledge to transform ideas into functional and visually appealing websites.
+              My journey in web development has equipped me with the skills to turn
+              concepts into visually appealing, high-performance applications.
             </li>
             <li>
-              Whether working on the frontend or backend, I strive to deliver seamless user experiences and efficient solutions.
+              Whether working on interface design or server-side logic, I prioritize
+              efficiency, maintainability, and user satisfaction.
             </li>
           </ul>
         </div>
       </div>
 
+      {/* Hero Image & Tech Icons */}
       <div className="hero-img">
         <img src="./assets/images/hero.jpg" alt="Hero" />
+        
+        {/* Right-side Icons */}
         <div className="tech-icons-right">
-          <img src="./assets/images/spring.png" alt="Spring" className="tech-icon-right spring" />
-          <img src="./assets/images/react.png" alt="React" className="tech-icon-right react" />
-          <img src="./assets/images/java.png" alt="Java" className="tech-icon-right java" />
+          <img
+            src="./assets/images/spring.png"
+            alt="Spring"
+            className="tech-icon-right spring"
+          />
+          <img
+            src="./assets/images/react.png"
+            alt="React"
+            className="tech-icon-right react"
+          />
+          <img
+            src="./assets/images/java.png"
+            alt="Java"
+            className="tech-icon-right java"
+          />
         </div>
+        
+        {/* Bottom Icons */}
         <div className="tech-icons">
           <img src="./assets/images/js.png" alt="JavaScript" />
           <img src="./assets/images/mysql.png" alt="MySQL" />
