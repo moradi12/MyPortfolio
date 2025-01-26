@@ -1,35 +1,35 @@
 .container {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 1.5rem;
-  position: relative;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    position: relative;
 }
 
 @media (max-width: 1025px) {
-  .container {
-    padding: 1rem;
-  }
+    .container {
+        padding: 1rem;
+    }
 }
 
 @media (max-width: 768px) {
-  .container {
-    padding: 0.8rem;
-  }
+    .container {
+        padding: 0.8rem;
+    }
 }
 
 @media (max-width: 600px) {
-  .container {
-    padding: 0.5rem;
-  }
+    .container {
+        padding: 0.5rem;
+    }
 }
 
 .section {
-  margin-bottom: 4rem;
+    margin-bottom: 4rem;
 }
 
 @media (max-width: 768px) {
-  .section {
-    width: 100%;
-    margin-bottom: 2rem;
-  }
+    .section {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
 }
