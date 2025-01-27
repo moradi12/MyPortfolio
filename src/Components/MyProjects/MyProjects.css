@@ -87,14 +87,6 @@
     background: linear-gradient(135deg, #ff4b2b, #8a1682);
 }
 
-/* Project Icon (Optional) */
-.project-icon {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 15px;
-    /* Optional: Add shadow or other effects */
-}
-
 /* Project Title */
 .project-card-section h4 {
     font-size: 2.2rem;
@@ -234,4 +226,29 @@
     .project-card-section p {
         max-height: none;
     }
+}
+
+/* Project Images Container */
+.project-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap; /* Ensures images wrap if there are too many */
+    margin-top: 15px;
+}
+
+.project-image {
+    width: 100%;
+    max-width: 150px; /* Adjust as needed */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 }

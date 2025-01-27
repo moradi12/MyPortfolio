@@ -121,6 +121,8 @@ export const EDUCATION = [
   },
 ];
 
+// data.js
+
 export const PROJECTS = [
   {
     title: "Hotel Management System",
@@ -128,7 +130,12 @@ export const PROJECTS = [
       "A comprehensive web application for managing hotel operations and enhancing customer experiences. Customers can book rooms, review booking history, and manage profiles, while administrators oversee room management and update services.",
     technologies: ["React.js", "Java", "Spring Boot", "MySQL", "JWT", "Notyf"],
     link: "https://github.com/moradi12/Hotel-Project.git",
-    variant: "0", // Added variant
+    variant: "0", // Corrected variant
+    images: [
+      "/assets/images/hotel1.png",
+      "/assets/images/hotel2.png",
+      "/assets/images/hotel3.png",
+    ],
   },
   {
     title: "Coupon Management System",
@@ -136,7 +143,8 @@ export const PROJECTS = [
       "A platform for creating, managing, and redeeming coupons. Customers can view available coupons and redeem them, while admins can create, update, and delete coupons, manage customer information, and view coupon usage analytics.",
     technologies: ["React.js", "Java", "Spring Boot", "MySQL", "JWT", "Notyf", "Redux"],
     link: "https://github.com/moradi12/Completed-Coupon-Project",
-    variant: "1", // Added variant
+    variant: "1", // Corrected variant
+    images: [], // Added empty images array
   },
   {
     title: "Recipe Book",
@@ -155,6 +163,11 @@ export const PROJECTS = [
       "Swagger",
     ],
     link: "https://github.com/moradi12/Recipe-Book",
-    variant: "3", // Added variant
+    variant: "2", // Corrected variant from "3" to "2"
+    images: [
+      "/assets/images/recipe.png",
+      "/assets/images/recipe2.png",
+    ],
   },
 ];
+

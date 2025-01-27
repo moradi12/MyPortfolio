@@ -7,8 +7,11 @@ import Hero from './Components/Hero/Hero';
 import MyProjects from './Components/MyProjects/MyProjects';
 import Navbar from './Components/Navbar/Navbar';
 import Skills from './Components/Skills/Skills';
-import SocialMedia from './Components/SocialMedia/SocialMedia'; 
+import SocialMedia from './Components/SocialMedia/SocialMedia';
 import WorkExperience from './Components/WorkExperience/WorkExperience';
+// index.js or App.js
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 
 const App = () => {
   return (

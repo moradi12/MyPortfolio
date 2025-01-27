@@ -49,21 +49,35 @@ const MyProjects = () => {
         {/* Slider */}
         <Slider ref={sliderRef} {...settings}>
           {PROJECTS.map((project, index) => {
-            // Assign a unique class based on the index
-            const cardClass = `project-card-section project-card-${index % 3}`;
+            // Assign a unique class based on the project's variant
+            const cardClass = `project-card-section project-card-${project.variant}`;
             return (
               <div key={index} className={cardClass}>
-                {/* Optional: Display the project icon */}
-                {project.icon && (
-                  <img src={project.icon} alt={`${project.title} icon`} className="project-icon" />
-                )}
+                {/* Removed project.icon rendering */}
+
                 <h4>{project.title}</h4>
                 <p>{project.description}</p>
+                
                 <div className="project-technologies">
                   {project.technologies.map((tech, i) => (
                     <span key={i} className="project-technology-item">{tech}</span>
                   ))}
                 </div>
+
+                {/* Render images if available */}
+                {project.images && project.images.length > 0 && (
+                  <div className="project-images">
+                    {project.images.map((img, i) => (
+                      <img
+                        src={img}
+                        alt={`${project.title} preview ${i + 1}`}
+                        key={i}
+                        className="project-image"
+                      />
+                    ))}
+                  </div>
+                )}
+
                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-section-link">
                   View Project
                 </a>
