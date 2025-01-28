@@ -144,7 +144,14 @@ export const PROJECTS = [
     technologies: ["React.js", "Java", "Spring Boot", "MySQL", "JWT", "Notyf", "Redux"],
     link: "https://github.com/moradi12/Completed-Coupon-Project",
     variant: "1", // Corrected variant
-    images: [], // Added empty images array
+    images: [
+      "/assets/images/coupon.png",
+      "/assets/images/coupon2.png",
+
+
+
+
+    ], // Added empty images array
   },
   {
     title: "Recipe Book",
