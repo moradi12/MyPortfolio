@@ -1,6 +1,5 @@
 /* MyProjects.css */
 
-/* Container Styles */
 .project-section-container {
     margin: 5rem 0;
     padding: 3rem 4rem;
@@ -23,7 +22,6 @@
     position: relative; /* Ensure arrows are positioned relative to this container */
 }
 
-/* Slick Slider Overrides */
 .slick-list,
 .slick-track,
 .slick-slide {
@@ -106,7 +104,6 @@
     max-height: 250px;
 }
 
-/* Technologies Container */
 .project-technologies {
     margin-top: 20px;
     display: flex;
@@ -115,7 +112,6 @@
     justify-content: center;
 }
 
-/* Technology Item */
 .project-technology-item {
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
@@ -124,10 +120,9 @@
     padding: 10px 15px;
     margin: 5px 5px;
     font-size: 1rem;
-    backdrop-filter: blur(5px); /* Adds a glassmorphism effect */
+    backdrop-filter: blur(5px);
 }
 
-/* Project Link */
 .project-section-link {
     display: inline-block;
     background-color: #ffffff;
@@ -228,19 +223,18 @@
     }
 }
 
-/* Project Images Container */
 .project-images {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    flex-wrap: wrap; /* Ensures images wrap if there are too many */
+    flex-wrap: wrap; 
     margin-top: 15px;
 }
 
 .project-image {
     width: 100%;
-    max-width: 150px; /* Adjust as needed */
+    max-width: 150px; 
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);

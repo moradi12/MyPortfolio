@@ -1,14 +1,20 @@
 // MyProjects.jsx
 
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useRef } from "react";
+import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useRef, useState } from "react";
 import Slider from "react-slick";
-import { PROJECTS } from "../../utils/data"; // Ensure this path is correct
-import './MyProjects.css';
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css"; // Import the lightbox CSS
+import { PROJECTS } from "../../utils/data";
+import "./MyProjects.css";
 
 const MyProjects = () => {
   const sliderRef = useRef();
+  const [isOpen, setIsOpen] = useState(false);
+  const [currentImages, setCurrentImages] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -17,7 +23,7 @@ const MyProjects = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    arrows: false, // We'll handle arrows manually
+    arrows: false, 
     responsive: [
       {
         breakpoint: 769,
@@ -35,6 +41,16 @@ const MyProjects = () => {
 
   const slideLeft = () => {
     sliderRef.current.slickPrev();
+  };
+
+  const handleImageClick = (images, index) => {
+    const slides = images.map((img) => ({
+      src: img,
+      alt: "Project Image",
+    }));
+    setCurrentImages(slides);
+    setCurrentIndex(index);
+    setIsOpen(true);
   };
 
   return (
@@ -57,10 +73,12 @@ const MyProjects = () => {
 
                 <h4>{project.title}</h4>
                 <p>{project.description}</p>
-                
+
                 <div className="project-technologies">
                   {project.technologies.map((tech, i) => (
-                    <span key={i} className="project-technology-item">{tech}</span>
+                    <span key={i} className="project-technology-item">
+                      {tech}
+                    </span>
                   ))}
                 </div>
 
@@ -73,12 +91,18 @@ const MyProjects = () => {
                         alt={`${project.title} preview ${i + 1}`}
                         key={i}
                         className="project-image"
+                        onClick={() => handleImageClick(project.images, i)}
                       />
                     ))}
                   </div>
                 )}
 
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-section-link">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-section-link"
+                >
                   View Project
                 </a>
               </div>
@@ -91,6 +115,22 @@ const MyProjects = () => {
           <FontAwesomeIcon icon={faChevronRight} />
         </div>
       </div>
+
+      {/* Lightbox Modal */}
+      {isOpen && (
+        <Lightbox
+          open={isOpen}
+          close={() => setIsOpen(false)}
+          slides={currentImages}
+          index={currentIndex}
+          styles={{
+            container: { backgroundColor: "rgba(0, 0, 0, 0.9)" },
+            buttonPrev: { backgroundColor: "#a044ff" },
+            buttonNext: { backgroundColor: "#a044ff" },
+            buttonClose: { backgroundColor: "#a044ff" },
+          }}
+        />
+      )}
     </section>
   );
 };
