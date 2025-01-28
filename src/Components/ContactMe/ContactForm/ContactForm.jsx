@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Swal from "sweetalert2";
 import "./ContactForm.css";
 
@@ -11,13 +11,11 @@ const ContactForm = () => {
         const formData = new FormData(event.target);
 
         formData.append("access_key", "55782fea-0503-4e2e-9261-dcd7e97639ad");
-
         try {
             const response = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
                 body: formData
             });
-
             const data = await response.json();
 
             if (data.success) {

@@ -1,12 +1,10 @@
 :root {
-    /* Color Variables */
     --color-bg: #1a142d;
     --color-bg-semi: rgba(255, 255, 255, 0.1);
     --color-text: #ffffff;
     --color-text-light: #d4d4e2;
     --color-primary: #a044ff;
 
-    /* Gradient Variants */
     --gradient-blue-start: #1e3c72;
     --gradient-blue-end: #2a5298;
     --gradient-purple-start: #6a3093;
@@ -14,7 +12,6 @@
     --gradient-coral-start: #8a1682;
     --gradient-coral-end: #ff4b2b;
 
-    /* Spacing & Sizing */
     --border-radius: 0.9375rem; /* 15px in rem */
     --transition-speed: 0.3s;
     --box-shadow-base: 0 4px 12px rgba(0, 0, 0, 0.5);
@@ -22,7 +19,6 @@
     --arrow-size: 4rem;
 }
 
-/* Container */
 .project-section-container {
     margin: 5rem 0;
     padding: 3rem 4rem;
@@ -40,7 +36,6 @@
     color: var(--color-text);
 }
 
-/* Projects Slider */
 .project-section-slider {
     position: relative; /* Positioning for arrows */
 }
@@ -59,7 +54,6 @@
     height: 100%;
 }
 
-/* Project Card Base Styles */
 .project-card-section {
     border-radius: var(--border-radius);
     padding: 2.5rem;
@@ -175,7 +169,6 @@
     transform: scale(1.05);
 }
 
-/* Arrow Button Styling */
 .project-arrow-left,
 .project-arrow-right {
     width: var(--arrow-size);

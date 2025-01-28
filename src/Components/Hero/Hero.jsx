@@ -1,12 +1,10 @@
 import "./Hero.css";
-
 const Hero = () => {
   return (
     <section className="hero-container">
       <div className="hero-content">
         <h2>Creating Unique Web Experiences</h2>
         <p>Full Stack Developer | Transforming Ideas into Engaging Applications</p>
-        
         <div className="about-me">
           <h3>About Me</h3>
           <ul>
@@ -28,11 +26,8 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Hero Image & Tech Icons */}
       <div className="hero-img">
         <img src="./assets/images/hero.jpg" alt="Hero" />
-        
-        {/* Right-side Icons */}
         <div className="tech-icons-right">
           <img
             src="./assets/images/spring.png"
@@ -50,8 +45,6 @@ const Hero = () => {
             className="tech-icon-right java"
           />
         </div>
-        
-        {/* Bottom Icons */}
         <div className="tech-icons">
           <img src="./assets/images/js.png" alt="JavaScript" />
           <img src="./assets/images/mysql.png" alt="MySQL" />

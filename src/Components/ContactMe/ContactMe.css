@@ -19,7 +19,6 @@
   color: #ffffff;
 }
 
-/* Contact Content Layout */
 .contact-content {
   display: flex;
   flex-direction: row;
@@ -29,14 +28,12 @@
   justify-content: center;
 }
 
-/* Contact Info Icons */
 .contact-info {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-/* Individual Contact Link Styles */
 .contact-link {
   display: flex;
   align-items: center;
@@ -56,7 +53,6 @@
   background: rgba(106, 48, 147, 0.9); /* Darker on hover */
 }
 
-/* Specific Link Backgrounds */
 .email-link:hover {
   background: rgba(255, 105, 180, 0.9); /* Hot pink on hover */
 }
@@ -73,7 +69,6 @@
   background: rgba(212, 72, 213, 0.9); /* Vibrant purple on hover */
 }
 
-/* Contact Icons */
 .contact-icon, .resume-icon {
   width: 32px;
   height: 32px;
@@ -85,19 +80,16 @@
   color: #d048d5; /* Vibrant accent color for resume */
 }
 
-/* Contact Labels */
 .contact-label {
   font-size: 1.2rem;
   color: #e0e0e0;
 }
 
-/* Hover Effect on Icons */
 .contact-link:hover .contact-icon,
 .contact-link:hover .resume-icon {
   transform: scale(1.2);
 }
 
-/* Contact Form Container */
 .contact-form-container {
   width: 100%;
   max-width: 600px;
@@ -108,7 +100,6 @@
   backdrop-filter: blur(5px);
 }
 
-/* Contact Form Styles */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -130,7 +121,7 @@
   padding: 1rem;
   border-radius: 8px;
   border: 1px solid #7c66e3;
-  background: #2a1d4e; /* Slightly lighter for input fields */
+  background: #2a1d4e; 
   color: #ffffff;
   font-size: 1rem;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -139,7 +130,7 @@
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: #b0a8c3; /* Lighter placeholder text */
+  color: #b0a8c3; 
 }
 
 .contact-form input:focus,

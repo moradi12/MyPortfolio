@@ -9,16 +9,13 @@ import "yet-another-react-lightbox/styles.css"; // Import the lightbox CSS
 import { PROJECTS } from "../../utils/data";
 import "./MyProjects.css";
 
-// Extracted ProjectCard component for better readability and reusability
 const ProjectCard = memo(({ project, onImageClick }) => {
   const cardClass = `project-card-section project-card-${project.variant}`;
 
   return (
     <div className={cardClass} tabIndex="0">
-      {/* Project Title */}
       <h4>{project.title}</h4>
       
-      {/* Project Description */}
       <p>{project.description}</p>
       
       {/* Technologies Used */}
@@ -30,7 +27,6 @@ const ProjectCard = memo(({ project, onImageClick }) => {
         ))}
       </div>
       
-      {/* Project Images */}
       {project.images && project.images.length > 0 && (
         <div className="project-images">
           {project.images.map((img, i) => (
@@ -50,8 +46,7 @@ const ProjectCard = memo(({ project, onImageClick }) => {
           ))}
         </div>
       )}
-      
-      {/* Project Link */}
+
       {project.link && (
         <a
           href={project.link}
@@ -83,7 +78,7 @@ const MyProjects = () => {
     arrows: false, 
     responsive: [
       {
-        breakpoint: 1025, // Adjusted breakpoint for better responsiveness
+        breakpoint: 1025,
         settings: {
           slidesToShow: 2,
         },
@@ -139,14 +134,13 @@ const MyProjects = () => {
         <Slider ref={sliderRef} {...sliderSettings}>
           {PROJECTS.map((project) => (
             <ProjectCard
-              key={project.id || project.title} // Ensure each project has a unique key
+              key={project.id || project.title} 
               project={project}
               onImageClick={handleImageClick}
             />
           ))}
         </Slider>
 
-        {/* Right Arrow */}
         <button
           className="project-arrow-right"
           onClick={slideRight}
@@ -156,7 +150,6 @@ const MyProjects = () => {
         </button>
       </div>
 
-      {/* Lightbox Modal */}
       {isOpen && (
         <Lightbox
           open={isOpen}

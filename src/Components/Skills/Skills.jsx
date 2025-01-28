@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import './Skills.css';
+import { useState } from 'react';
 import { SKILLS } from '../../utils/data';
 import SkillCard from './SkillCard/SkillCard';
+import './Skills.css';
 import SkillsInfoCard from './SkillsInfoCard/SkillsInfoCard';
 
 const Skills = () => {
@@ -36,5 +36,4 @@ const Skills = () => {
     </section>
   );
 };
-
 export default Skills;

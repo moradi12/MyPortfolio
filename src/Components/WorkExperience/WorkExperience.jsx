@@ -1,10 +1,10 @@
-import React, { useRef } from "react";
-import Slider from "react-slick"; 
-import "./WorkExperience.css";
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useRef } from "react";
+import Slider from "react-slick";
 import { WORK_EXPERIENCE } from "../../utils/data";
 import ExperienceCard from "./ExperienceCard/ExperienceCard";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import "./WorkExperience.css";
 
 const WorkExperience = () => {
   const sliderRef = useRef();
@@ -55,5 +55,4 @@ const WorkExperience = () => {
     </section>
   );
 };
-
 export default WorkExperience;

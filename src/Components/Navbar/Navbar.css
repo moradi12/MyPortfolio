@@ -3,13 +3,11 @@
    overflow-x: hidden; 
  }
  .nav-wrapper {
-   /* Position & Layout */
    position: sticky;
    top: 0;
    z-index: 30;
    overflow-x: hidden;
    
-   /* Visual Styles */
    background: rgba(0, 0, 0, 0.1);
    backdrop-filter: blur(50px);
    padding: 0.5rem 0;

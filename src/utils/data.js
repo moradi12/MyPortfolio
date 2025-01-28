@@ -187,7 +187,7 @@ export const PROJECTS = [
       "Swagger",
     ],
     link: "https://github.com/moradi12/Recipe-Book",
-    variant: "2", // Corrected variant from "3" to "2"
+    variant: "2",
     images: [
       "/assets/images/recipe.png",
       "/assets/images/recipe2.png",
