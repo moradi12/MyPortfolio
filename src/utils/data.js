@@ -128,15 +128,32 @@ export const PROJECTS = [
     title: "Hotel Management System",
     description:
       "A comprehensive web application for managing hotel operations and enhancing customer experiences. Customers can book rooms, review booking history, and manage profiles, while administrators oversee room management and update services.",
-    technologies: ["React.js", "Java", "Spring Boot", "MySQL", "JWT", "Notyf"],
+    technologies: [
+      // Frontend
+      "React.js",
+      "React Router",
+      "Redux Toolkit",
+      "Axios",
+      
+      // Backend
+      "Spring Boot + JPA",
+      "Hibernate",
+      "Lombok",
+      "JWT (JSON Web Tokens)",
+      "RESTful APIs",
+      "Swagger/OpenAPI",
+      
+      // Database
+      "MySQL",
+    ],
     link: "https://github.com/moradi12/Hotel-Project.git",
-    variant: "0", // Corrected variant
+    variant: "0",
     images: [
       "/assets/images/hotel1.png",
       "/assets/images/hotel2.png",
       "/assets/images/hotel3.png",
     ],
-  },
+  },  
   {
     title: "Coupon Management System",
     description:

@@ -1,10 +1,33 @@
-/* MyProjects.css */
+:root {
+    /* Color Variables */
+    --color-bg: #1a142d;
+    --color-bg-semi: rgba(255, 255, 255, 0.1);
+    --color-text: #ffffff;
+    --color-text-light: #d4d4e2;
+    --color-primary: #a044ff;
 
+    /* Gradient Variants */
+    --gradient-blue-start: #1e3c72;
+    --gradient-blue-end: #2a5298;
+    --gradient-purple-start: #6a3093;
+    --gradient-purple-end: #a044ff;
+    --gradient-coral-start: #8a1682;
+    --gradient-coral-end: #ff4b2b;
+
+    /* Spacing & Sizing */
+    --border-radius: 0.9375rem; /* 15px in rem */
+    --transition-speed: 0.3s;
+    --box-shadow-base: 0 4px 12px rgba(0, 0, 0, 0.5);
+    --box-shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.7);
+    --arrow-size: 4rem;
+}
+
+/* Container */
 .project-section-container {
     margin: 5rem 0;
     padding: 3rem 4rem;
-    background-color: #1a142d; /* Darker background for contrast */
-    border-radius: 15px;
+    background-color: var(--color-bg);
+    border-radius: var(--border-radius);
     position: relative;
     text-align: left;
 }
@@ -14,12 +37,12 @@
     font-weight: 700;
     margin-bottom: 4rem;
     text-align: left;
-    color: #ffffff;
+    color: var(--color-text);
 }
 
 /* Projects Slider */
 .project-section-slider {
-    position: relative; /* Ensure arrows are positioned relative to this container */
+    position: relative; /* Positioning for arrows */
 }
 
 .slick-list,
@@ -38,211 +61,219 @@
 
 /* Project Card Base Styles */
 .project-card-section {
-    border-radius: 15px;
+    border-radius: var(--border-radius);
     padding: 2.5rem;
-    margin: 0 20px;
-    min-height: 450px;
+    margin: 0 1.25rem; /* Replaces 0 20px for more consistency */
+    min-height: 28.125rem; /* 450px in rem */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Slightly darker shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-    color: #f0f0f0; /* Light text for readability */
+    box-shadow: var(--box-shadow-base);
+    transition: 
+        transform var(--transition-speed) ease, 
+        box-shadow var(--transition-speed) ease, 
+        background var(--transition-speed) ease;
+    color: var(--color-text-light);
 }
 
-.project-card-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+.project-card-section:hover,
+.project-card-section:focus-within {
+    transform: translateY(-0.3125rem); /* 5px in rem */
+    box-shadow: var(--box-shadow-hover);
 }
 
-/* Variant 0: Vibrant Blue Gradient */
+/* Gradient Variants */
 .project-card-0 {
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    border: 2px solid #2a5298;
+    background: linear-gradient(135deg, var(--gradient-blue-start), var(--gradient-blue-end));
+    border: 0.125rem solid var(--gradient-blue-end); /* 2px in rem */
+}
+.project-card-0:hover,
+.project-card-0:focus-within {
+    background: linear-gradient(135deg, var(--gradient-blue-end), var(--gradient-blue-start));
 }
 
-.project-card-0:hover {
-    background: linear-gradient(135deg, #2a5298, #1e3c72);
-}
-
-/* Variant 1: Electric Purple Gradient */
 .project-card-1 {
-    background: linear-gradient(135deg, #6a3093, #a044ff);
-    border: 2px solid #a044ff;
+    background: linear-gradient(135deg, var(--gradient-purple-start), var(--gradient-purple-end));
+    border: 0.125rem solid var(--gradient-purple-end);
+}
+.project-card-1:hover,
+.project-card-1:focus-within {
+    background: linear-gradient(135deg, var(--gradient-purple-end), var(--gradient-purple-start));
 }
 
-.project-card-1:hover {
-    background: linear-gradient(135deg, #a044ff, #6a3093);
-}
-
-/* Variant 2: Neon Coral Gradient */
 .project-card-2 {
-    background: linear-gradient(135deg, #8a1682, #ff4b2b);
-    border: 2px solid #ff4b2b;
+    background: linear-gradient(135deg, var(--gradient-coral-start), var(--gradient-coral-end));
+    border: 0.125rem solid var(--gradient-coral-end);
 }
-
-.project-card-2:hover {
-    background: linear-gradient(135deg, #ff4b2b, #8a1682);
+.project-card-2:hover,
+.project-card-2:focus-within {
+    background: linear-gradient(135deg, var(--gradient-coral-end), var(--gradient-coral-start));
 }
 
 /* Project Title */
 .project-card-section h4 {
     font-size: 2.2rem;
     font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 15px;
+    color: var(--color-text);
+    margin-bottom: 1rem;
 }
 
 /* Project Description */
 .project-card-section p {
     font-size: 1.2rem;
     line-height: 1.6;
-    color: #d4d4e2;
-    margin-bottom: 15px;
+    color: var(--color-text-light);
+    margin-bottom: 1rem;
     overflow: hidden; 
     height: auto;
-    max-height: 250px;
+    max-height: 15.625rem; /* 250px in rem */
 }
 
+/* Technology List */
 .project-technologies {
-    margin-top: 20px;
+    margin-top: 1.25rem; /* 20px in rem */
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 0.9375rem; /* 15px in rem */
     justify-content: center;
 }
 
 .project-technology-item {
     display: inline-block;
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-    color: #ffffff;
-    border-radius: 20px;
-    padding: 10px 15px;
-    margin: 5px 5px;
+    background-color: var(--color-bg-semi);
+    color: var(--color-text);
+    border-radius: 1.25rem; /* 20px in rem */
+    padding: 0.625rem 0.9375rem; /* 10px 15px in rem */
+    margin: 0.3125rem; /* 5px in rem */
     font-size: 1rem;
     backdrop-filter: blur(5px);
 }
 
+/* Link Button */
 .project-section-link {
     display: inline-block;
-    background-color: #ffffff;
+    background-color: var(--color-text);
     color: #0f0e1d;
     text-decoration: none;
-    padding: 15px 30px;
-    border-radius: 5px;
+    padding: 0.9375rem 1.875rem; /* 15px 30px in rem */
+    border-radius: 0.3125rem; /* 5px in rem */
     font-size: 1.2rem;
     font-weight: 600;
-    margin-top: 15px;
+    margin-top: 0.9375rem; /* 15px in rem */
     text-align: center;
-    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    transition: 
+        background-color var(--transition-speed) ease, 
+        transform var(--transition-speed) ease, 
+        color var(--transition-speed) ease;
+    cursor: pointer;
 }
 
-.project-section-link:hover {
-    background-color: #a044ff;
-    color: #ffffff;
+.project-section-link:hover,
+.project-section-link:focus {
+    background-color: var(--color-primary);
+    color: var(--color-text);
     transform: scale(1.05);
 }
 
 /* Arrow Button Styling */
 .project-arrow-left,
 .project-arrow-right {
-    width: 4rem;
-    height: 4rem;
+    width: var(--arrow-size);
+    height: var(--arrow-size);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
+    color: var(--color-text);
     border-radius: 50%;
-    border: 2px solid #a044ff;
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border: 0.125rem solid var(--color-primary);
+    background: var(--color-bg-semi);
     position: absolute;
     top: 50%;
     z-index: 2;
     cursor: pointer;
     transform: translateY(-50%);
-    transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    transition: 
+        background var(--transition-speed) ease, 
+        transform var(--transition-speed) ease, 
+        color var(--transition-speed) ease;
 }
 
 .project-arrow-left:hover,
-.project-arrow-right:hover {
-    background: #a044ff;
-    color: #ffffff;
+.project-arrow-left:focus,
+.project-arrow-right:hover,
+.project-arrow-right:focus {
+    background: var(--color-primary);
+    color: var(--color-text);
     transform: translateY(-50%) scale(1.1);
 }
 
-/* Positioning Arrows */
+/* Arrow Positions */
 .project-arrow-left {
     left: -3.5rem;
 }
-
 .project-arrow-right {
     right: -3.5rem;
 }
 
-/* Adjust Arrow Positioning for Tablet */
+/* Tablet Adjustments */
 @media (max-width: 1025px) {
     .project-arrow-left {
         left: -2rem;
     }
-
     .project-arrow-right {
         right: -2rem;
     }
 }
 
-/* Adjust Styles for Mobile */
+/* Mobile Adjustments */
 @media (max-width: 768px) {
     .project-section-container {
         margin: 3rem 0;
         padding: 2.5rem;
     }
-
     .project-section-title {
         font-size: 2.5rem;
         margin-bottom: 3rem;
     }
-
     .project-arrow-left {
         left: -1.5rem;
     }
-
     .project-arrow-right {
         right: -1.5rem;
     }
-
     .project-card-section {
-        min-height: 500px;
+        min-height: 31.25rem; /* 500px in rem */
     }
-
     .project-card-section h4 {
         font-size: 1.8rem;
     }
-
     .project-card-section p {
         max-height: none;
     }
 }
 
+/* Project Images */
 .project-images {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 0.625rem; /* 10px in rem */
     flex-wrap: wrap; 
-    margin-top: 15px;
+    margin-top: 0.9375rem; /* 15px in rem */
 }
 
 .project-image {
     width: 100%;
-    max-width: 150px; 
+    max-width: 9.375rem; /* 150px in rem */
     height: auto;
-    border-radius: 10px;
+    border-radius: 0.625rem; /* 10px in rem */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     object-fit: cover;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 }
 
-.project-image:hover {
+.project-image:hover,
+.project-image:focus {
     transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--box-shadow-hover);
 }
