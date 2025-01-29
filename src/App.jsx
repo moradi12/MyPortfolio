@@ -1,5 +1,6 @@
-// src/App.jsx
 
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 import './App.css';
 import ContactMe from './Components/ContactMe/ConactMe';
 import Footer from './Components/Footer/Footer';
@@ -9,9 +10,6 @@ import Navbar from './Components/Navbar/Navbar';
 import Skills from './Components/Skills/Skills';
 import SocialMedia from './Components/SocialMedia/SocialMedia';
 import WorkExperience from './Components/WorkExperience/WorkExperience';
-// index.js or App.js
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
 
 const App = () => {
   return (

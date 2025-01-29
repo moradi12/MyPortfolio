@@ -235,7 +235,6 @@
    }
  }
  
- /* Small screens & phones */
  @media (max-width: 425px) {
    .logo {
      width: 10rem;

@@ -12,7 +12,7 @@
     --gradient-coral-start: #8a1682;
     --gradient-coral-end: #ff4b2b;
 
-    --border-radius: 0.9375rem; /* 15px in rem */
+    --border-radius: 0.9375rem;
     --transition-speed: 0.3s;
     --box-shadow-base: 0 4px 12px rgba(0, 0, 0, 0.5);
     --box-shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.7);
@@ -37,7 +37,7 @@
 }
 
 .project-section-slider {
-    position: relative; /* Positioning for arrows */
+    position: relative;
 }
 
 .slick-list,
@@ -57,8 +57,8 @@
 .project-card-section {
     border-radius: var(--border-radius);
     padding: 2.5rem;
-    margin: 0 1.25rem; /* Replaces 0 20px for more consistency */
-    min-height: 28.125rem; /* 450px in rem */
+    margin: 0 1.25rem;
+    min-height: 28.125rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -72,14 +72,13 @@
 
 .project-card-section:hover,
 .project-card-section:focus-within {
-    transform: translateY(-0.3125rem); /* 5px in rem */
+    transform: translateY(-0.3125rem);
     box-shadow: var(--box-shadow-hover);
 }
 
-/* Gradient Variants */
 .project-card-0 {
     background: linear-gradient(135deg, var(--gradient-blue-start), var(--gradient-blue-end));
-    border: 0.125rem solid var(--gradient-blue-end); /* 2px in rem */
+    border: 0.125rem solid var(--gradient-blue-end);
 }
 .project-card-0:hover,
 .project-card-0:focus-within {
@@ -104,7 +103,6 @@
     background: linear-gradient(135deg, var(--gradient-coral-end), var(--gradient-coral-start));
 }
 
-/* Project Title */
 .project-card-section h4 {
     font-size: 2.2rem;
     font-weight: 600;
@@ -112,7 +110,6 @@
     margin-bottom: 1rem;
 }
 
-/* Project Description */
 .project-card-section p {
     font-size: 1.2rem;
     line-height: 1.6;
@@ -120,15 +117,14 @@
     margin-bottom: 1rem;
     overflow: hidden; 
     height: auto;
-    max-height: 15.625rem; /* 250px in rem */
+    max-height: 15.625rem;
 }
 
-/* Technology List */
 .project-technologies {
-    margin-top: 1.25rem; /* 20px in rem */
+    margin-top: 1.25rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.9375rem; /* 15px in rem */
+    gap: 0.9375rem;
     justify-content: center;
 }
 
@@ -136,24 +132,23 @@
     display: inline-block;
     background-color: var(--color-bg-semi);
     color: var(--color-text);
-    border-radius: 1.25rem; /* 20px in rem */
-    padding: 0.625rem 0.9375rem; /* 10px 15px in rem */
-    margin: 0.3125rem; /* 5px in rem */
+    border-radius: 1.25rem;
+    padding: 0.625rem 0.9375rem;
+    margin: 0.3125rem;
     font-size: 1rem;
     backdrop-filter: blur(5px);
 }
 
-/* Link Button */
 .project-section-link {
     display: inline-block;
     background-color: var(--color-text);
     color: #0f0e1d;
     text-decoration: none;
-    padding: 0.9375rem 1.875rem; /* 15px 30px in rem */
-    border-radius: 0.3125rem; /* 5px in rem */
+    padding: 0.9375rem 1.875rem;
+    border-radius: 0.3125rem;
     font-size: 1.2rem;
     font-weight: 600;
-    margin-top: 0.9375rem; /* 15px in rem */
+    margin-top: 0.9375rem;
     text-align: center;
     transition: 
         background-color var(--transition-speed) ease, 
@@ -200,7 +195,6 @@
     transform: translateY(-50%) scale(1.1);
 }
 
-/* Arrow Positions */
 .project-arrow-left {
     left: -3.5rem;
 }
@@ -208,7 +202,6 @@
     right: -3.5rem;
 }
 
-/* Tablet Adjustments */
 @media (max-width: 1025px) {
     .project-arrow-left {
         left: -2rem;
@@ -218,7 +211,6 @@
     }
 }
 
-/* Mobile Adjustments */
 @media (max-width: 768px) {
     .project-section-container {
         margin: 3rem 0;
@@ -235,7 +227,7 @@
         right: -1.5rem;
     }
     .project-card-section {
-        min-height: 31.25rem; /* 500px in rem */
+        min-height: 31.25rem;
     }
     .project-card-section h4 {
         font-size: 1.8rem;
@@ -245,21 +237,20 @@
     }
 }
 
-/* Project Images */
 .project-images {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.625rem; /* 10px in rem */
-    flex-wrap: wrap; 
-    margin-top: 0.9375rem; /* 15px in rem */
+    gap: 0.625rem;
+    flex-wrap: wrap;
+    margin-top: 0.9375rem;
 }
 
 .project-image {
     width: 100%;
-    max-width: 9.375rem; /* 150px in rem */
+    max-width: 9.375rem;
     height: auto;
-    border-radius: 0.625rem; /* 10px in rem */
+    border-radius: 0.625rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     object-fit: cover;
     transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;

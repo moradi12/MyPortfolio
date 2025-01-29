@@ -41,7 +41,7 @@
 }
 
 .experience-body {
-  flex-grow: 1; /* Allows the body to take available space */
+  flex-grow: 1; 
 }
 
 .experience-body ul {

@@ -1,10 +1,8 @@
-
 .hero-container {
   display: flex;
   align-items: center;
   position: relative;
   padding: 2rem;
-
 }
 .hero-container::after,
 .hero-container::before {
@@ -35,7 +33,7 @@
   font-weight: 600;
   line-height: 5rem;
   margin-bottom: 1rem;
-  margin-top: -2rem; 
+  margin-top: -2rem;
 }
 
 .hero-container p {
@@ -47,11 +45,10 @@
 
 .about-me {
   margin-top: 2rem;
-  margin-left: -1rem; 
+  margin-left: -1rem;
   padding: 1.5rem;
   max-width: 600px;
 
-  /* Styling */
   background: rgba(124, 102, 227, 0.1);
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -61,7 +58,7 @@
 .about-me h3 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
-  color: #ccc9d9f9; 
+  color: #ccc9d9f9;
   border-bottom: 2px solid #cecae1;
   padding-bottom: 0.5rem;
 }
@@ -132,7 +129,6 @@
   opacity: 0.8;
 }
 
-
 @media (max-width: 1025px) {
   .hero-container h2 {
     font-size: 3rem;
@@ -167,7 +163,7 @@
   .hero-container h2 {
     font-size: 2.5rem;
     line-height: 3.5rem;
-    margin-top: 1rem; 
+    margin-top: 1rem;
   }
 
   .hero-container img {
@@ -216,7 +212,6 @@
   }
 }
 
-
 @media (max-width: 600px) {
   .hero-container {
     flex-direction: column-reverse;
@@ -228,7 +223,7 @@
   .hero-container h2 {
     font-size: 2rem;
     line-height: 3rem;
-    margin-top: 2rem; 
+    margin-top: 2rem;
   }
 
   .hero-container p {
@@ -270,33 +265,34 @@
   to {
     transform: rotate(360deg);
   }
-} */
-
-.hero-img .tech-icon-right {
-  animation: float 3s ease-in-out infinite; 
+}
+ .hero-img .tech-icon-right {
+  animation: float 3s ease-in-out infinite;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .hero-img .tech-icon-right:hover {
-  animation: rotate 1s linear; 
+  animation: rotate 1s linear;
 }
 
 .tech-icons > img {
-  animation: float 3s ease-in-out infinite; 
+  animation: float 3s ease-in-out infinite;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .tech-icons > img:hover {
-  animation: rotate 1s linear; 
-  transform: scale(1.2); 
+  animation: rotate 1s linear;
+  transform: scale(1.2);
 }
 
 .hero-img .tech-icon-right:hover,
 .tech-icons > img:hover {
-  box-shadow: 0 0 15px rgba(124, 102, 227, 0.8), 0 0 25px rgba(124, 102, 227, 0.5);
+  box-shadow: 0 0 15px rgba(124, 102, 227, 0.8),
+    0 0 25px rgba(124, 102, 227, 0.5);
 }
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
