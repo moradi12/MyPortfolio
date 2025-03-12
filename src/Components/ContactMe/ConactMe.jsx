@@ -1,6 +1,11 @@
 // ContactMe.jsx
 
-import { FaEnvelope, FaFileDownload, FaGithub, FaLinkedin } from 'react-icons/fa';
+import {
+  FaEnvelope,
+  FaFileDownload,
+  FaGithub,
+  FaLinkedin,
+} from "react-icons/fa";
 import ContactForm from "./ContactForm/ContactForm";
 import "./ContactMe.css";
 
@@ -11,7 +16,7 @@ const ContactMe = () => {
       <div className="contact-content">
         <div className="contact-info">
           {/* Email Icon */}
-          <a 
+          <a
             href="mailto:TamirMoradi@Gmail.com"
             className="contact-link email-link"
             aria-label="Send an email to Tamir Moradi"
@@ -21,8 +26,8 @@ const ContactMe = () => {
           </a>
 
           {/* GitHub Icon */}
-          <a 
-            href="https://github.com/moradi12" 
+          <a
+            href="https://github.com/moradi12"
             className="contact-link github-link"
             aria-label="Visit my GitHub profile"
             target="_blank"
@@ -33,8 +38,8 @@ const ContactMe = () => {
           </a>
 
           {/* LinkedIn Icon */}
-          <a 
-            href="https://www.linkedin.com/in/tamir-moradi-1a62b0260/" 
+          <a
+            href="https://www.linkedin.com/in/tamir-moradi-1a62b0260/"
             className="contact-link linkedin-link"
             aria-label="Connect with me on LinkedIn"
             target="_blank"
@@ -44,9 +49,8 @@ const ContactMe = () => {
             <span className="contact-label">LinkedIn</span>
           </a>
 
-          {/* Resume Download Button */}
-          <a 
-            href="/TAMIR_MORADI.pdf"
+          <a
+            href="/Tmoradi.pdf" // Make sure this matches the actual file name
             download="Tamir-Moradi-Resume.pdf"
             className="contact-link resume-link"
             aria-label="Download my resume"
