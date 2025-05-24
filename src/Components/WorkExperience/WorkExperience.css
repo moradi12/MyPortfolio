@@ -1,109 +1,54 @@
-.experience-container {
-  margin: 5rem 0;
-  position: relative;
-  text-align: left;
-}
-
-.experience-container h5 {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 4rem;
-  text-align: left;
-  color: #ffffff;
-}
-
-.experience-slider {
-  display: flex;
-  align-items: stretch;
-  flex-direction: column;
-}
-
-.slick-list {
-  display: flex;
-  align-items: stretch;
-  height: 100%;
-}
-
-.slick-track {
-  display: flex;
-  align-items: stretch;
-}
-
-.slick-slide {
-  display: flex;
-  align-items: stretch;
-  height: auto;
-}
-
-.slick-slide > div {
-  display: flex;
-  flex: 1;
-  height: 100%;
+:root {
+  --arrow-bg: #6751b9;
+  --arrow-bg-hover: #5840a0;
+  --arrow-color: #ffffff;
+  --arrow-size: 3.5rem;
+  --arrow-offset: 1.5rem;
+  --arrow-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .arrow-left,
 .arrow-right {
-  width: 3rem;
-  height: 3rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--arrow-size);
+  height: var(--arrow-size);
+  background: var(--arrow-bg);
+  color: var(--arrow-color);
+  border: none;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #6751b9;
-  border-radius: 50%;
-  border: 2px solid #6751b9;
-  background: #130f2a;
-  position: absolute;
-  top: 50%;
-  z-index: 2;
+  box-shadow: var(--arrow-shadow);
   cursor: pointer;
-  transform: translateY(-50%);
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 10;
+}
+  
+.arrow-left {
+  left: var(--arrow-offset);
+}
+  
+.arrow-right {
+  right: var(--arrow-offset);
 }
 
 .arrow-left:hover,
 .arrow-right:hover {
-  background: #6751b9;
-  transform: translateY(-50%) scale(1.1);
+  background: var(--arrow-bg-hover);
+  transform: translateY(-50%) scale(1.15);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
-.arrow-left span,
-.arrow-right span {
-  font-size: 2.5rem;
-  font-weight: 500;
-}
-
-.arrow-left {
-  left: -2.5rem;
-}
-
-.arrow-right {
-  right: -2.5rem;
-}
-
-@media (max-width: 1025px) {
-  .arrow-left {
-    left: -1rem;
-  }
-
-  .arrow-right {
-    right: -1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .experience-container {
-    margin: 3rem 0;
-  }
-
-  .experience-container h5 {
-    font-size: 1.8rem;
-    margin-bottom: 3rem;
-  }
-
-  .arrow-left {
-    left: -1.5rem;
-  }
-
-  .arrow-right {
-    right: -1.5rem;
-  }
+/* Optional: improve tap/click area on touch devices */
+.arrow-left::after,
+.arrow-right::after {
+  content: "";
+  position: absolute;
+  top: -0.5rem;
+  bottom: -0.5rem;
+  left: -0.5rem;
+  right: -0.5rem;
 }

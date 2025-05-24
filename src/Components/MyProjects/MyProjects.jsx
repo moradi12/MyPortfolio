@@ -162,8 +162,8 @@ const MyProjects = () => {
             buttonNext: { backgroundColor: "#a044ff" },
             buttonClose: { backgroundColor: "#a044ff" },
           }}
-          carousel={{ finite: false }} // Allows infinite scrolling in lightbox
-          keyboard={{ enabled: true }} // Enables keyboard navigation
+          carousel={{ finite: false }} 
+          keyboard={{ enabled: true }} 
         />
       )}
     </section>
