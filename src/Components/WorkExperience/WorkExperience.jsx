@@ -1,5 +1,8 @@
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRef } from "react";
 import Slider from "react-slick";
 import { WORK_EXPERIENCE } from "../../utils/data";
@@ -40,17 +43,29 @@ const WorkExperience = () => {
     <section id="experience" className="experience-container">
       <h5 className="experience-title">Work Experience & Education</h5>
       <div className="experience-slider">
-        <div className="arrow-left" onClick={slideLeft}>
+        <button
+          type="button"
+          className="arrow-btn arrow-btn--left"
+          aria-label="Previous slide"
+          onClick={slideLeft}
+        >
           <FontAwesomeIcon icon={faChevronLeft} />
-        </div>
+        </button>
+
         <Slider ref={sliderRef} {...settings}>
-          {WORK_EXPERIENCE.map((item, index) => (
-            <ExperienceCard key={index} details={item} />
+          {WORK_EXPERIENCE.map((item, idx) => (
+            <ExperienceCard key={idx} details={item} />
           ))}
         </Slider>
-        <div className="arrow-right" onClick={slideRight}>
+
+        <button
+          type="button"
+          className="arrow-btn arrow-btn--right"
+          aria-label="Next slide"
+          onClick={slideRight}
+        >
           <FontAwesomeIcon icon={faChevronRight} />
-        </div>
+        </button>
       </div>
     </section>
   );
