@@ -18,51 +18,42 @@ const WorkExperience = () => {
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 4000,
     arrows: false,
     responsive: [
       {
-        breakpoint: 769,
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
         },
       },
     ],
   };
 
-  const slideRight = () => {
-    sliderRef.current.slickNext();
-  };
-
-  const slideLeft = () => {
-    sliderRef.current.slickPrev();
-  };
-
   return (
     <section id="experience" className="experience-container">
       <h5 className="experience-title">Work Experience & Education</h5>
-      <div className="experience-slider">
+      <div className="experience-slider-wrapper">
         <button
-          type="button"
           className="arrow-btn arrow-btn--left"
-          aria-label="Previous slide"
-          onClick={slideLeft}
+          onClick={() => sliderRef.current.slickPrev()}
+          aria-label="Previous"
         >
           <FontAwesomeIcon icon={faChevronLeft} />
         </button>
 
-        <Slider ref={sliderRef} {...settings}>
-          {WORK_EXPERIENCE.map((item, idx) => (
-            <ExperienceCard key={idx} details={item} />
-          ))}
-        </Slider>
+        <div className="experience-slider">
+          <Slider ref={sliderRef} {...settings}>
+            {WORK_EXPERIENCE.map((item, idx) => (
+              <ExperienceCard key={idx} details={item} index={idx} />
+            ))}{" "}
+          </Slider>
+        </div>
 
         <button
-          type="button"
           className="arrow-btn arrow-btn--right"
-          aria-label="Next slide"
-          onClick={slideRight}
+          onClick={() => sliderRef.current.slickNext()}
+          aria-label="Next"
         >
           <FontAwesomeIcon icon={faChevronRight} />
         </button>
@@ -70,4 +61,5 @@ const WorkExperience = () => {
     </section>
   );
 };
+
 export default WorkExperience;

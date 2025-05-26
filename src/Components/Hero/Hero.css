@@ -130,12 +130,14 @@
 .tech-icon:hover {
   animation: pulse 0.8s ease;
   transform: scale(1.15);
-  box-shadow: 0 0 15px rgba(124, 102, 227, 0.8), 0 0 25px rgba(124, 102, 227, 0.5);
+  box-shadow: 0 0 15px rgba(124, 102, 227, 0.8),
+    0 0 25px rgba(124, 102, 227, 0.5);
 }
 
 /* Animations */
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {

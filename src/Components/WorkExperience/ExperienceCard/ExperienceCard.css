@@ -1,115 +1,145 @@
+:root {
+  --card-bg: rgba(22, 17, 47, 0.55);
+  --card-border-grad: linear-gradient(135deg, #7c66e3 0%, #6751b9 100%);
+  --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --card-shadow-h: 0 12px 32px rgba(0, 0, 0, 0.55);
+  --text-main: #f5f5f7;
+  --text-sub: #c9c9d1;
+  --accent: #7c66e3;
+}
+
 .experience-card {
-  background: #130f2a;
-  border-radius: 1rem;
-  border: 2px solid #6751b9;
-  padding: 1.5rem;
-  margin: 1rem;
+  position: relative;
+  min-height: 240px;
+  flex: 1;
+  padding: 1.75rem 2rem;
+  border-radius: 1.25rem;
+  isolation: isolate;
+  background: var(--card-bg);
+  color: var(--text-main);
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: var(--card-shadow);
+}
+
+.experience-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: var(--card-border-grad);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .experience-card:hover {
-  transform: translateY(-0.5rem);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-6px);
+  box-shadow: var(--card-shadow-h);
 }
 
 .experience-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #6751b9;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  gap: 0.75rem;
 }
 
 .experience-header h6 {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 0.9rem + 0.6vw, 1.25rem);
   font-weight: 600;
-  color: #ffffff;
+  line-height: 1.3;
   margin: 0;
 }
 
 .experience-duration {
-  font-size: 0.9rem;
-  font-weight: 400;
-  background: rgba(103, 81, 185, 0.5);
-  border-radius: 0.3rem;
-  padding: 0.4rem 0.6rem;
-  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 0.35rem 0.65rem;
+  border-radius: 0.4rem;
+  background: rgba(124, 102, 227, 0.18);
+  backdrop-filter: blur(4px);
+  white-space: nowrap;
 }
 
 .experience-body {
-  flex-grow: 1; 
+  flex: 1;
 }
 
 .experience-body ul {
-  list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.55rem;
 }
 
-.experience-body ul li {
-  font-size: 1rem;
-  font-weight: 400;
-  color: #e0e0e0;
-  margin-bottom: 0.5rem;
+.experience-body li {
+  font-size: 0.95rem;
+  color: var(--text-sub);
   position: relative;
-  padding-left: 1.5rem;
+  padding-left: 1.35rem;
 }
 
-.experience-body ul li::before {
+.experience-body li::before {
   content: "";
-  width: 0.5rem;
-  height: 0.5rem;
-  background-color: #6751b9;
-  border-radius: 50%;
   position: absolute;
   left: 0;
-  top: 0.2rem;
+  top: 0.45rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 6px rgba(124, 102, 227, 0.8);
 }
 
-@media (max-width: 1025px) {
+.arrow-btn {
+  --size: 3rem;
+  width: var(--size);
+  height: var(--size);
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: none;
+  background: var(--card-border-grad);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease;
+}
+
+.arrow-btn:hover {
+  transform: translateY(-3px);
+}
+
+.arrow-btn--left {
+  margin-right: 0.85rem;
+}
+.arrow-btn--right {
+  margin-left: 0.85rem;
+}
+
+@media (max-width: 1024px) {
   .experience-card {
-    padding: 1rem;
-    margin: 0.5rem;
+    padding: 1.4rem 1.6rem;
   }
-
-  .experience-header h6 {
-    font-size: 1rem;
-  }
-
-  .experience-duration {
-    font-size: 0.75rem;
-  }
-
-  .experience-body ul li {
-    font-size: 0.8rem;
+  .experience-body li {
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 768px) {
   .experience-card {
-    padding: 1rem;
-    margin: 0;
+    padding: 1.2rem 1.4rem;
   }
-
-  .experience-header h6 {
-    font-size: 0.95rem;
-  }
-
-  .experience-duration {
-    font-size: 0.7rem;
-    padding: 0.3rem 0.5rem;
-  }
-
-  .experience-body ul li {
-    font-size: 0.75rem;
-  }
-
-  .experience-body ul li::before {
-    left: -1rem;
-    top: 0.3rem;
+  .arrow-btn {
+    --size: 2.6rem;
+    font-size: 0.9rem;
   }
 }

@@ -7,21 +7,26 @@ const Hero = () => {
         <div className="intro">
           <h1 className="my-name">Tamir Moradi</h1>
           <h2>Creating Unique Web Experiences</h2>
-          <p>Full Stack Developer | Transforming Ideas into Engaging Applications</p>
+          <p>
+            Full Stack Developer | Transforming Ideas into Engaging Applications
+          </p>
         </div>
 
         <div className="about-me">
           <h3>About Me</h3>
           <ul>
             <li>
-              <strong>Dedicated Full Stack Developer</strong> with expertise in Java and Spring Boot (backend),
-              and React with TypeScript (frontend). Passionate about scalable APIs and great UX.
+              <strong>Dedicated Full Stack Developer</strong> with expertise in
+              Java and Spring Boot (backend), and React with TypeScript
+              (frontend). Passionate about scalable APIs and great UX.
             </li>
             <li>
-              I transform concepts into high-performance applications with attention to detail and efficiency.
+              I transform concepts into high-performance applications with
+              attention to detail and efficiency.
             </li>
             <li>
-              Whether it's interface design or backend logic, I focus on maintainability and user satisfaction.
+              Whether it's interface design or backend logic, I focus on
+              maintainability and user satisfaction.
             </li>
           </ul>
         </div>
