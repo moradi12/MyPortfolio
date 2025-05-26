@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Swal from "sweetalert2";
-import "./ContactForm.css";
-
+import "../../ContactMe/ConactMe";
 const ContactForm = () => {
     const [result, setResult] = useState("");
 
