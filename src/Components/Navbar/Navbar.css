@@ -1,257 +1,152 @@
- body,
- html {
-   overflow-x: hidden; 
- }
- .nav-wrapper {
-   position: sticky;
-   top: 0;
-   z-index: 30;
-   overflow-x: hidden;
-   
-   background: rgba(0, 0, 0, 0.1);
-   backdrop-filter: blur(50px);
-   padding: 0.5rem 0;
- }
- 
- .nav-content {
-   max-width: 1300px;
-   margin: auto;
-   padding: 1rem 0;
- 
-   /* Layout */
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
- }
- 
- .logo {
-   width: 12rem;
-   height: auto;
- }
- 
- .nav-links {
-   display: flex;
-   align-items: center;
-   gap: 0.5rem;
-   list-style: none;
- }
- 
- .nav-links li {
-   margin: 0 1.5rem;
- }
- 
- .menu-item {
-   text-decoration: none;
-   font-size: 1.4rem;
-   font-weight: 500;
-   color: #fff;
-   position: relative;
-   cursor: pointer;
- }
- 
- .menu-item::before {
-   content: "";
-   width: 2rem;
-   height: 0.2rem;
-   border-radius: 0.5rem;
-   background: linear-gradient(90deg, #a993fe 0%, #7e61e7 100%);
-   position: absolute;
-   bottom: -0.6rem;
-   opacity: 0;
-   transform: translateX(-1.5rem);
-   transition: all 0.3s ease;
- }
- 
- .menu-item:hover::before {
-   width: 100%;
-   transform: translateX(0);
-   opacity: 1;
- }
- .contact-btn {
-   font-size: 1.2rem;
-   font-weight: 500;
-   color: #fff;
-   background: linear-gradient(90deg, #a993fe 0%, #7e61e7 100%);
-   
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   padding: 0.6rem 2rem;
-   border: none;
-   outline: 1.5px solid transparent;
-   border-radius: 0.2rem;
-   cursor: pointer;
-   transition: all 0.3s ease;
- }
- 
- .contact-btn:hover {
-   color: #a993fe;
-   background: #000;
-   outline: 1.5px solid #a993fe;
- }
- .menu-btn {
-   display: none; 
-   position: absolute;
-   left: calc(14rem + 1rem); 
-   width: 2.5rem;
-   height: 2.5rem;
-   
-   font-size: 1.5rem;
-   color: #fff;
-   background: linear-gradient(90deg, #7e61e7 0%, #a993fe 100%);
-   border: none;
-   border-radius: 0.4rem;
-   line-height: 0;
-   cursor: pointer;
-   transition: all 0.4s ease;
- }
- 
- .menu-btn:hover {
-   color: #a993fe;
-   background: #000;
-   border: 1px solid #a993fe;
- }
- 
- .nav-icon {
-   font-size: 1.8rem;
- }
- 
- 
- /* Tablets & below */
- @media (max-width: 768px) {
-   .menu-btn {
-     display: block;
-   }
- 
-   .nav-links {
-     display: none;
-   }
- 
-   .menu {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     text-align: center;
-   }
- 
-   .menu-item {
-     margin: 10px 0;
-   }
- 
-   .contact-btn {
-     margin: 10px 0;
-   }
- }
- 
- .mobile-menu {
-   display: none;
-   width: 100vw;
-   height: 100vh;
-   background-color: rgba(0, 0, 0, 0.3);
- 
-   position: fixed;
-   top: 0;
-   left: 0;
-   z-index: 999;
- 
-   opacity: 0;
-   transform: translateX(-100vw);
-   box-shadow: 0 29px 80px rgba(0, 0, 0, 0.3);
-   transition: all 0.3s ease;
-   overflow: hidden;
- }
- 
- /* Active state for the overlay */
- .mobile-menu.active {
-   display: block;
-   opacity: 1;
-   transform: translateX(0);
- }
- .mobile-menu-container {
-   width: calc(100vw - 20px);
-   height: 100vh;
-   background-color: #342864;
-   padding: 2rem;
-   position: relative;
- }
- 
- .mobile-menu img {
-   margin-bottom: 3rem;
-   width: 100px;
- }
- .mobile-menu ul {
-   display: flex;
-   flex-direction: column;
-   gap: 2rem;
-   list-style: none;
-   padding: 0;
- }
- 
- .mobile-menu .menu-item {
-   font-size: 1.2rem;
-   font-weight: 500;
-   color: #fff;
-   margin: 10px 0;
-   text-decoration: none;
-   transition: color 0.3s ease;
- }
- 
- .mobile-menu .menu-item:hover {
-   color: #a993fe;
- }
- 
- .mobile-menu .contact-btn {
-   margin-top: 2rem;
-   padding: 0.5rem 1rem;
-   background-color: #a993fe;
-   border: none;
-   color: #fff;
-   cursor: pointer;
- }
- 
- .mobile-menu .menu-btn {
-   position: absolute;
-   top: 4rem;
-   right: 1rem;
-   background: none;
-   border: none;
-   color: #fff;
-   cursor: pointer;
- }
- 
- .mobile-menu .menu-btn span {
-   font-size: 1.8rem;
- }
- @media (max-width: 768px) {
-   .mobile-menu-container {
-     left: 0;
-     width: calc(100vw - 20px);
-     padding: 1rem;
-   }
- 
-   .mobile-menu img {
-     margin-bottom: 1.5rem;
-     width: 80px;
-   }
- }
- 
- @media (max-width: 425px) {
-   .logo {
-     width: 10rem;
-   }
- 
-   .menu-btn {
-     display: block;
-   }
- 
-   .nav-links {
-     display: none;
-   }
- }
- 
- @media (max-width: 1325px) {
-   .nav-wrapper {
-     padding: 0 2rem;
-   }
- }
- 
+/* ---------- ROOT COLORS ---------- */
+:root {
+  --bg-page-start: #100c25;
+  --bg-page-end:   #060414;
+  --bg-nav:        rgba(16, 12, 37, .85);
+  --nav-grad:      linear-gradient(90deg,#9d8bff 0%,#7b5ffe 100%);
+  --nav-grad-hov:  linear-gradient(90deg,#b4a5ff 0%,#9175ff 100%);
+  --text-main:     #ffffff;
+  --text-dim:      #d0ceff;
+}
+
+/* ---------- PAGE BACKGROUND ---------- */
+html,
+body {
+  overflow-x: hidden;
+  min-height: 100%;
+  background: radial-gradient(ellipse at 50% -20%, var(--bg-page-start) 0%, var(--bg-page-end) 80%);
+  color: var(--text-main);
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---------- NAV WRAPPER ---------- */
+.nav-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #0b0720;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+/* ---------- NAV CONTENT ---------- */
+.nav-content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ---------- LOGO ---------- */
+.logo {
+  width: 11.5rem;
+  height: auto;
+}
+
+/* ---------- NAV LINKS WRAPPER ---------- */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* ---------- NAV LINK LIST ITEM ---------- */
+.nav-links li {
+  margin-inline: 1.25rem;
+}
+
+/* ---------- NAV LINK ---------- */
+.menu-item {
+  position: relative;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-main);
+  transition: color .25s ease;
+}
+
+/* ---------- NAV LINK UNDERLINE ---------- */
+.menu-item::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  bottom: -.55rem;
+  width: 0;
+  height: .22rem;
+  border-radius: .4rem;
+  background: var(--nav-grad);
+  transition: width .3s ease;
+}
+
+/* ---------- NAV LINK HOVER ---------- */
+.menu-item:hover {
+  color: var(--text-dim);
+}
+
+/* ---------- NAV LINK UNDERLINE HOVER ---------- */
+.menu-item:hover::before {
+  width: 100%;
+}
+
+/* ---------- CONTACT BUTTON ---------- */
+.contact-btn {
+  padding: 0.6rem 1.5rem;
+  background: var(--nav-grad);
+  color: white;
+  border-radius: 0.35rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border: 1px solid transparent;
+  margin-top: 0.1rem; 
+}
+/* ---------- CONTACT BUTTON HOVER ---------- */
+.contact-btn:hover {
+  background: transparent;
+  color: var(--nav-grad-hov);
+  border-color: var(--nav-grad-hov);
+  box-shadow: 0 0 0 .15rem rgba(123,95,254,.35);
+}
+
+/* ---------- HAMBURGER BUTTON ---------- */
+.menu-btn {
+  display: none;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  translate: 0 -50%;
+  width: 2.6rem;
+  height: 2.6rem;
+  font-size: 1.55rem;
+  color: var(--text-main);
+  background: var(--nav-grad);
+  border: none;
+  border-radius: .4rem;
+  cursor: pointer;
+  transition: background .25s ease, box-shadow .25s ease;
+}
+
+/* ---------- HAMBURGER BUTTON HOVER ---------- */
+.menu-btn:hover {
+  background: var(--nav-grad-hov);
+  box-shadow: 0 0 0 .15rem rgba(123,95,254,.35);
+}
+
+/* ---------- MEDIA ≤ 768PX ---------- */
+@media (max-width: 768px) {
+  .menu-btn { display: block; }
+  .nav-links { display: none; }
+}
+
+/* ---------- MEDIA ≤ 425PX ---------- */
+@media (max-width: 425px) {
+  .logo     { width: 9rem; }
+  .menu-btn { right: .75rem; }
+}
+
+/* ---------- MEDIA ≤ 1325PX ---------- */
+@media (max-width: 1325px) {
+  .nav-wrapper { padding-inline: 1.5rem; }
+}

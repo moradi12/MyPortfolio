@@ -1,79 +1,127 @@
+/* ---------- שימוש בצבעים שהוגדרו ב־:root ---------- */
 .mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: none;                        /* ייחשף מתחת ל־768px */
   width: 100vw;
   height: 100vh;
-  display: none;
-  background-color: rgba(0, 0, 0, 0.3);
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 999 !important;
+  background: rgba(0, 0, 0, 0.45);      /* שכבת־חצי־שקיפות */
+  backdrop-filter: blur(6px);
   opacity: 0;
-  box-shadow: 0px 29px 80px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-  transform: translateX(-100vw);
+  transform: translateX(-100%);
+  transition: opacity .35s ease, transform .45s cubic-bezier(.25,.8,.35,1);
 }
 
-.mobile-menu-container {
-  width: 60vw;
-  height: 100vh;
-  background-color: #342864;
-  padding: 2rem;
-}
-
-.mobile-menu-active {
+.mobile-menu.active {
+  display: block;
   opacity: 1;
   transform: translateX(0);
 }
 
-.mobile-menu img {
-  margin-bottom: 3rem;
-  width: 100px;
+/* ---------- מגרת הצד ---------- */
+.mobile-menu-container {
+  width: 70vw;                /* ירגיש “דַּרַאוּוֶר” */
+  max-width: 22rem;
+  height: 100%;
+  background: radial-gradient(circle at 20% 10%, #3c3074 0%, #261d55 60%, #1a1438 100%);
+  padding: 2.5rem 1.75rem;
+  position: relative;
+  box-shadow: 4px 0 24px rgba(0,0,0,.35);
 }
 
-.mobile-menu ul {
+/* ---------- לוגו ---------- */
+.mobile-menu .logo {
+  width: 6.5rem;
+  margin-bottom: 2.5rem;
+}
+
+/* ---------- קישורים ---------- */
+.mobile-links {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.menu-item {
-  text-decoration: none;
-  font-size: 1.2rem; 
+.mobile-links .menu-item {
+  font-size: 1.3rem;
   font-weight: 500;
-  color: #fff;
-  margin: 10px 0;
-  transition: color 0.3s ease;
+  text-decoration: none;
+  color: var(--text-main);
+  position: relative;
+  transition: color .25s ease;
 }
 
-.menu-item:hover {
-  color: #a993fe; 
+.mobile-links .menu-item::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  bottom: -.4rem;
+  width: 0;
+  height: .18rem;
+  border-radius: .25rem;
+  background: var(--nav-grad);
+  transition: width .3s ease;
 }
 
+.mobile-links .menu-item:hover {
+  color: var(--text-dim);
+}
+
+.mobile-links .menu-item:hover::before {
+  width: 100%;
+}
+
+/* ---------- Hire Me ---------- */
+.contact-btn {
+  display: inline-block;
+  margin-top: 3rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: .6rem 2.2rem;
+  border-radius: .35rem;
+  color: var(--text-main);
+  background: var(--nav-grad);
+  border: 1.5px solid transparent;
+  transition: all .25s ease;
+}
+
+.contact-btn:hover {
+  background: transparent;
+  border-color: var(--nav-grad-hov);
+  color: var(--nav-grad-hov);
+  box-shadow: 0 0 0 .15rem rgba(123,95,254,.35);
+}
+
+/* ---------- כפתור סגירה ---------- */
+.menu-btn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  border: none;
+  border-radius: .4rem;
+  font-size: 1.6rem;
+  color: var(--text-main);
+  background: var(--nav-grad);
+  cursor: pointer;
+  transition: background .25s ease;
+}
+
+.menu-btn:hover {
+  background: var(--nav-grad-hov);
+}
+
+/* ---------- רספונסיביות ---------- */
 @media (max-width: 768px) {
-  .mobile-menu {
-      display: block;
-  }
+  .mobile-menu { display: block; }
+}
 
-  .menu {
-      display: none;
-  }
-
-  .mobile-menu-container {
-      width: 80vw; 
-      padding: 1rem; 
-  }
-
-  .mobile-menu img {
-      margin-bottom: 1.5rem; 
-      width: 80px;
-  }
-
-  .menu.open {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-  }
+@media (max-width: 425px) {
+  .mobile-menu-container { width: 85vw; }
+  .mobile-menu .logo      { width: 5.5rem; margin-bottom: 2rem; }
 }
