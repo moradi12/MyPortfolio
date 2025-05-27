@@ -10,8 +10,8 @@ export const SKILLS = [
       { skill: "React", percentage: "80%" },
       { skill: "TypeScript", percentage: "85%" },
       { skill: "Tailwind CSS", percentage: "80%" },
-      { skill: "Bootstrap", percentage: "75%" },
-      { skill: "Vite", percentage: "70%" },
+      { skill: "Bootstrap", percentage: "80%" },
+      { skill: "Vite", percentage: "80%" },
     ],
   },
   {
@@ -32,7 +32,7 @@ export const SKILLS = [
     skills: [
       { skill: "Leadership", percentage: "85%" },
       { skill: "Communication", percentage: "85%" },
-      { skill: "Problem-Solving", percentage: "80%" },
+      { skill: "Problem-Solving", percentage: "90%" },
       { skill: "Adaptability", percentage: "80%" },
     ],
   },
@@ -54,7 +54,7 @@ export const SKILLS = [
     skills: [
       { skill: "Postman", percentage: "80%" },
       { skill: "Docker", percentage: "70%" },
-      { skill: "Swagger / OpenAPI", percentage: "80%" },
+      { skill: "Swagger / OpenAPI", percentage: "85%" },
       { skill: "Jest / Testing Library", percentage: "75%" },
     ],
   },
@@ -63,8 +63,8 @@ export const SKILLS = [
     title: "Cloud & CI/CD",
     icon: "/assets/images/cloud.png",
     skills: [
-      { skill: "AWS", percentage: "65%" },
-      { skill: "GitHub Actions", percentage: "65%" },
+      { skill: "AWS", percentage: "70%" },
+      { skill: "GitHub Actions", percentage: "75%" },
     ],
   },
   {
@@ -72,8 +72,8 @@ export const SKILLS = [
     title: "AI & Emerging Tech",
     icon: "/assets/images/aiicon.png",
     skills: [
-      { skill: "ChatGPT / GPT APIs", percentage: "80%" },
-      { skill: "Cursor IDE", percentage: "75%" },
+      { skill: "ChatGPT / GPT APIs", percentage: "90%" },
+      { skill: "Cursor IDE", percentage: "85%" },
       { skill: "Prompt Engineering", percentage: "70%" },
       { skill: "AI-Powered Dev Tools", percentage: "70%" },
     ],
