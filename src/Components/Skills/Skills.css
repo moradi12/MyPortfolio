@@ -1,38 +1,41 @@
+/* ======================== Skills Container ======================== */
 .skills-container {
   margin: 4rem 0;
   position: relative;
+  padding: 0 1rem;
 }
 
 .skills-container::after,
 .skills-container::before {
   content: " ";
+  position: absolute;
   width: 28rem;
   height: 28rem;
-  border-radius: 28.125rem;
-  background: #7c66e3;
-  position: absolute;
-  z-index: -1;
+  border-radius: 50%;
   filter: blur(200px);
+  z-index: -1;
 }
 
 .skills-container::after {
   top: -3rem;
   left: -5rem;
+  background: #7c66e3;
 }
 
 .skills-container::before {
-  background: #9e51b9;
-  bottom: 0rem;
-  right: 0rem;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(135deg, #9e51b9, #7c66e3);
 }
 
 .skills-container h5 {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 3.5rem;
-  text-align: center; 
+  text-align: center;
 }
 
+/* ======================== Skills Layout ======================== */
 .skills-content {
   display: flex;
   align-items: flex-start;
@@ -42,14 +45,32 @@
 .skills {
   flex: 1;
   display: grid;
-  grid-gap: 3rem;
   grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem;
 }
 
 .skills-info {
   flex: 1;
 }
 
+/* ======================== Skill Cards ======================== */
+.skill-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card.active[data-title="AI & Emerging Tech"] {
+  box-shadow: 0 0 20px rgba(124, 102, 227, 0.8);
+  border: 2px solid #7c66e3;
+  background: rgba(124, 102, 227, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* ======================== Responsive Breakpoints ======================== */
 @media (max-width: 1025px) {
   .skills {
     padding-left: 1rem;
@@ -96,6 +117,7 @@
   }
 }
 
+/* ======================== Technical Proficiency Wrapper ======================== */
 .technical-proficiency {
   display: flex;
   flex-direction: column;

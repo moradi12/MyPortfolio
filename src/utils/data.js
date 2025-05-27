@@ -1,179 +1,183 @@
-// data.js
-
 export const SKILLS = [
   {
+    id: 0,
     title: "Frontend",
     icon: "/assets/images/frontendicon.png",
     skills: [
       { skill: "HTML5", percentage: "75%" },
       { skill: "CSS", percentage: "80%" },
       { skill: "JavaScript", percentage: "80%" },
-      { skill: "React.js", percentage: "80%" },
+      { skill: "React", percentage: "80%" },
       { skill: "TypeScript", percentage: "85%" },
+      { skill: "Tailwind CSS", percentage: "80%" },
+      { skill: "Bootstrap", percentage: "75%" },
+      { skill: "Vite", percentage: "70%" },
     ],
   },
   {
+    id: 1,
     title: "Backend",
     icon: "/assets/images/backendicon.png",
     skills: [
       { skill: "Java", percentage: "80%" },
       { skill: "Spring Framework", percentage: "80%" },
+      { skill: "Python", percentage: "70%" },
     ],
   },
+
   {
-    title: "Tools",
-    icon: "/assets/images/toolsicon.png",
-    skills: [
-      { skill: "Git & GitHub", percentage: "80%" },
-      { skill: "Visual Studio Code", percentage: "80%" },
-      { skill: "npm", percentage: "80%" },
-      { skill: "MySQL", percentage: "85%" },
-      { skill: "IntelliJ IDEA", percentage: "85%" },
-    ],
-  },
-  {
+    id: 6,
     title: "Soft Skills",
     icon: "/assets/images/softskillsicon.png",
     skills: [
-      { skill: "Problem-Solving", percentage: "80%" },
-      { skill: "Collaboration", percentage: "85%" },
-      { skill: "Attention to Detail", percentage: "80%" },
+      { skill: "Leadership", percentage: "85%" },
       { skill: "Communication", percentage: "85%" },
+      { skill: "Problem-Solving", percentage: "80%" },
       { skill: "Adaptability", percentage: "80%" },
-      { skill: "Time Management", percentage: "80%" },
+    ],
+  },
+
+  {
+    id: 2,
+    title: "Databases & ORMs",
+    icon: "/assets/images/databaseicon.png",
+    skills: [
+      { skill: "MySQL", percentage: "85%" },
+      { skill: "PostgreSQL", percentage: "70%" },
+      { skill: "Hibernate/JPA", percentage: "80%" },
+    ],
+  },
+  {
+    id: 3,
+    title: "Dev & Testing Tools",
+    icon: "/assets/images/dev.png",
+    skills: [
+      { skill: "Postman", percentage: "80%" },
+      { skill: "Docker", percentage: "70%" },
+      { skill: "Swagger / OpenAPI", percentage: "80%" },
+      { skill: "Jest / Testing Library", percentage: "75%" },
+    ],
+  },
+  {
+    id: 4,
+    title: "Cloud & CI/CD",
+    icon: "/assets/images/cloud.png",
+    skills: [
+      { skill: "AWS", percentage: "65%" },
+      { skill: "GitHub Actions", percentage: "65%" },
+    ],
+  },
+  {
+    id: 5,
+    title: "AI & Emerging Tech",
+    icon: "/assets/images/aiicon.png",
+    skills: [
+      { skill: "ChatGPT / GPT APIs", percentage: "80%" },
+      { skill: "Cursor IDE", percentage: "75%" },
+      { skill: "Prompt Engineering", percentage: "70%" },
+      { skill: "AI-Powered Dev Tools", percentage: "70%" },
     ],
   },
 ];
 
 export const WORK_EXPERIENCE = [
   {
-    title: "Procurement and Logistics Manager",
+    id: 0,
+    title: "Procurement & Logistics Manager",
     company: "Noyhasade",
-    date: "2020 - 2021",
+    date: "2020 – 2021",
     responsibilities: [
-      "Optimized supply chain efficiency, reducing costs.",
-      "Managed vendor relationships and negotiated favorable contracts.",
-      "Enhanced processes and workflows to increase productivity.",
-      "Implemented IT solutions to streamline operations and drive digital transformation.",
-      "Focused on operational excellence to maximize organizational value.",
+      "Optimised supply-chain efficiency and reduced costs.",
+      "Negotiated vendor contracts and managed relationships.",
+      "Implemented IT solutions to streamline operations.",
     ],
   },
   {
+    id: 1,
     title: "Sales Representative",
     company: "Bug Multisystem Ltd",
-    date: "2018 - 2020",
+    date: "2018 – 2020",
     responsibilities: [
-      "Consistently exceeded sales targets and contributed to revenue growth.",
-      "Applied strategic thinking and in-depth product knowledge to close deals.",
-      "Strengthened customer relationships and provided exceptional service.",
-      "Recruited and trained new team members, boosting retention and long-term success.",
+      "Consistently exceeded quarterly sales targets.",
+      "Strengthened key customer relationships.",
+      "Recruited and mentored new team members.",
     ],
   },
   {
+    id: 2,
     title: "FP&A Specialist",
-    company: "Israel Defense Forces Agency",
-    date: "2015 - 2017",
+    company: "Israel Defense Forces (MoD)",
+    date: "2015 – 2017",
     responsibilities: [
-      "Served as Data Science and Analytics Lead in the Budget Department (Ministry of Defense), advising the Chief of Staff.",
-      "Built financial models, performed profitability analyses, and led FP&A initiatives.",
-      "Conducted effective negotiations, procurement, and vendor management to optimize resources.",
-    ],
-  },
-  {
-    title: "Education – College of Management Academic Studies",
-    date: "2022 - 2023",
-    responsibilities: [
-      "Completed a comprehensive program in economics and business strategies, sharpening analytical and critical thinking skills.",
-      "Gained a strong foundation for advanced studies and professional challenges in business and management fields.",
-    ],
-  },
-  {
-    title: "Education – John Bryce Training College",
-    date: "2023 - 2024",
-    responsibilities: [
-      "Developed web applications using Java, Spring Boot, and React.",
-      "Designed RESTful APIs and utilized Redux for state management.",
-      "Implemented JWT authentication and optimized SQL/NoSQL databases.",
-      "Ensured code quality through reviews and testing.",
+      "Led analytics for the Budget Department, advising the Chief of Staff.",
+      "Built financial models and profitability analyses.",
+      "Drove vendor negotiation and procurement strategy.",
     ],
   },
 ];
 
+/* --------------------------------------------------  EDUCATION  -- */
 export const EDUCATION = [
   {
-    title: "EDUCATION",
-    institutions: [
-      {
-        name: "College of Management Academic Studies",
-        date: "2022 - 2023",
-        responsibilities: [
-          "Preparatory Academic Program in Mathematics, Economics, and Business Administration.",
-        ],
-      },
-      {
-        name: "John Bryce Training College",
-        date: "2022 - 2023",
-        responsibilities: [
-          "Java Full-Stack Developer Program.",
-        ],
-      },
+    id: 0,
+    institution: "College of Management Academic Studies",
+    date: "2022 – 2023",
+    details: [
+      "Preparatory Academic Program – Mathematics, Economics & Business Administration.",
+    ],
+  },
+  {
+    id: 1,
+    institution: "John Bryce Training College",
+    date: "2023 – 2024",
+    details: [
+      "Java Full-Stack Developer Programme (Java, Spring Boot, React, REST APIs, JWT).",
     ],
   },
 ];
 
-// data.js
-
+/* --------------------------------------------------  PROJECTS  -- */
 export const PROJECTS = [
   {
+    id: 0,
     title: "Hotel Management System",
     description:
-      "A comprehensive web application for managing hotel operations and enhancing customer experiences. Customers can book rooms, review booking history, and manage profiles, while administrators oversee room management and update services.",
+      "Full-stack web app allowing guests to book rooms and admins to manage all hotel operations in one place.",
     technologies: [
-      // Frontend
-      "React.js",
-      "React Router",
+      "React",
       "Redux Toolkit",
       "Axios",
-      
-      // Backend
-      "Spring Boot + JPA",
+      "Spring Boot",
       "Hibernate",
-      "Lombok",
-      "JWT (JSON Web Tokens)",
-      "RESTful APIs",
-      "Swagger/OpenAPI",
-      
-      // Database
+      "JWT",
+      "Swagger",
       "MySQL",
     ],
-    link: "https://github.com/moradi12/Hotel-Project.git",
+    link: "https://github.com/moradi12/Hotel-Project",
+    demo: "https://sunsetqueen-hotel.netlify.app/",
     variant: "0",
     images: [
       "/assets/images/hotel1.png",
       "/assets/images/hotel2.png",
       "/assets/images/hotel3.png",
     ],
-  },  
-  {
-    title: "Coupon Management System",
-    description:
-      "A platform for creating, managing, and redeeming coupons. Customers can view available coupons and redeem them, while admins can create, update, and delete coupons, manage customer information, and view coupon usage analytics.",
-    technologies: ["React.js", "Java", "Spring Boot", "MySQL", "JWT", "Notyf", "Redux"],
-    link: "https://github.com/moradi12/Completed-Coupon-Project",
-    variant: "1", // Corrected variant
-    images: [
-      "/assets/images/coupon.png",
-      "/assets/images/coupon2.png",
-
-
-
-
-    ], // Added empty images array
   },
   {
+    id: 1,
+    title: "Coupon Management System",
+    description:
+      "Role-based platform for businesses to create coupons and for customers to redeem them, with real-time analytics.",
+    technologies: ["React", "Redux", "Spring Boot", "MySQL", "JWT", "Notyf"],
+    link: "https://github.com/moradi12/Completed-Coupon-Project",
+    demo: "https://frontcoupon.netlify.app/",
+    variant: "1",
+    images: ["/assets/images/coupon1.png", "/assets/images/coupon2.png"],
+  },
+  {
+    id: 2,
     title: "Recipe Book",
     description:
-      "A modern web application for browsing, creating, and managing recipes. It features secure JWT-based authentication, real-time notifications, advanced search and filtering, and a responsive design for a seamless user experience.",
+      "Modern recipe manager featuring JWT auth, advanced filtering and a Kafka-powered notifications pipeline.",
     technologies: [
       "React",
       "TypeScript",
@@ -182,16 +186,11 @@ export const PROJECTS = [
       "Redux Toolkit",
       "Spring Boot",
       "MySQL",
-      "JWT",
       "Kafka",
       "Swagger",
     ],
     link: "https://github.com/moradi12/Recipe-Book",
     variant: "2",
-    images: [
-      "/assets/images/recipe.png",
-      "/assets/images/recipe2.png",
-    ],
+    images: ["/assets/images/recipe1.png", "/assets/images/recipe2.png"],
   },
 ];
-

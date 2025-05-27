@@ -1,21 +1,28 @@
-.skills-card {
+.skill-card {
   border-radius: 0.65rem;
   border: 1.5px solid #6751b9;
   padding: 2.5rem;
   text-align: center;
-  background: rgba(22, 17, 47, 0.398);
+  background: rgba(22, 17, 47, 0.4);
   backdrop-filter: blur(1rem);
   position: relative;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.skills-card:hover,
-.skills-card.active {
+.skill-card:hover,
+.skill-card.active {
   background: linear-gradient(180deg, #aa94fe 0%, #7c5fe6 100%);
 }
 
-.skills-card span {
+/* Special Glow for AI tab */
+.skill-card.active[data-title="AI & Emerging Tech"] {
+  box-shadow: 0 0 20px rgba(124, 102, 227, 0.8);
+  border: 2px solid #7c66e3;
+  background: rgba(124, 102, 227, 0.15);
+}
+
+.skill-card span {
   font-size: 1.3rem;
   font-weight: 500;
 }
@@ -40,12 +47,13 @@
   object-fit: contain;
 }
 
+/* ---------------------- Responsive ---------------------- */
 @media (max-width: 1025px) {
-  .skills-card {
+  .skill-card {
     padding: 2rem;
   }
 
-  .skills-card span {
+  .skill-card span {
     font-size: 1rem;
   }
 
@@ -60,11 +68,11 @@
 }
 
 @media (max-width: 768px) {
-  .skills-card {
+  .skill-card {
     padding: 1.5rem;
   }
 
-  .skills-card span {
+  .skill-card span {
     font-size: 0.9rem;
   }
 
@@ -79,11 +87,11 @@
 }
 
 @media (max-width: 600px) {
-  .skills-card {
+  .skill-card {
     padding: 1rem;
   }
 
-  .skills-card span {
+  .skill-card span {
     font-size: 0.8rem;
   }
 
