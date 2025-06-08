@@ -191,6 +191,6 @@ export const PROJECTS = [
     ],
     link: "https://github.com/moradi12/Recipe-Book",
     variant: "2",
-    images: ["/assets/images/recipe1.png", "/assets/images/recipe2.png"],
+    images: ["/assets/images/recipe2.png","/assets/images/recipeHome.png","/assets/images/recipe.png"],
   },
 ];
