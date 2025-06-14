@@ -1,12 +1,11 @@
-/* ---------- שימוש בצבעים שהוגדרו ב־:root ---------- */
 .mobile-menu {
   position: fixed;
   inset: 0;
   z-index: 999;
-  display: none;                        /* ייחשף מתחת ל־768px */
+  display: none;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.45);      /* שכבת־חצי־שקיפות */
+  background: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(6px);
   opacity: 0;
   transform: translateX(-100%);
@@ -19,9 +18,8 @@
   transform: translateX(0);
 }
 
-/* ---------- מגרת הצד ---------- */
 .mobile-menu-container {
-  width: 70vw;                /* ירגיש “דַּרַאוּוֶר” */
+  width: 70vw;
   max-width: 22rem;
   height: 100%;
   background: radial-gradient(circle at 20% 10%, #3c3074 0%, #261d55 60%, #1a1438 100%);
@@ -30,13 +28,11 @@
   box-shadow: 4px 0 24px rgba(0,0,0,.35);
 }
 
-/* ---------- לוגו ---------- */
 .mobile-menu .logo {
   width: 6.5rem;
   margin-bottom: 2.5rem;
 }
 
-/* ---------- קישורים ---------- */
 .mobile-links {
   display: flex;
   flex-direction: column;
@@ -75,7 +71,6 @@
   width: 100%;
 }
 
-/* ---------- Hire Me ---------- */
 .contact-btn {
   display: inline-block;
   margin-top: 3rem;
@@ -96,7 +91,6 @@
   box-shadow: 0 0 0 .15rem rgba(123,95,254,.35);
 }
 
-/* ---------- כפתור סגירה ---------- */
 .menu-btn {
   position: absolute;
   top: 1.25rem;
@@ -116,12 +110,18 @@
   background: var(--nav-grad-hov);
 }
 
-/* ---------- רספונסיביות ---------- */
 @media (max-width: 768px) {
-  .mobile-menu { display: block; }
+  .mobile-menu {
+    display: block;
+  }
 }
 
 @media (max-width: 425px) {
-  .mobile-menu-container { width: 85vw; }
-  .mobile-menu .logo      { width: 5.5rem; margin-bottom: 2rem; }
+  .mobile-menu-container {
+    width: 85vw;
+  }
+  .mobile-menu .logo {
+    width: 5.5rem;
+    margin-bottom: 2rem;
+  }
 }
