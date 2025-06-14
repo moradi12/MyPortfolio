@@ -188,3 +188,21 @@
     .project-card-section { padding: 1rem; }
     .project-image { width: 60px; height: 60px; }
 }
+.project-card-0 .project-section-link:hover,
+.project-card-0 .project-section-link:focus {
+    background: #2a5298;         
+    color: var(--text-light);
+}
+
+/* Card 1  –  Purple */
+.project-card-1 .project-section-link:hover,
+.project-card-1 .project-section-link:focus {
+    background: #a044ff;          
+    color: var(--text-light);
+}
+
+.project-card-2 .project-section-link:hover,
+.project-card-2 .project-section-link:focus {
+    background: #ff4b2b;          
+    color: var(--text-light);
+}
